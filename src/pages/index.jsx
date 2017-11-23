@@ -2,7 +2,6 @@ import React from "react";
 import Helmet from "react-helmet";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
-import netlifyIdentity from "netlify-identity-widget";
 import Hero from "../components/modules/Hero";
 import Einar7 from "../images/Einar7.jpg";
 import PostListing from "../components/PostListing/PostListing";
@@ -11,16 +10,6 @@ import SalesPitch from "../components/HomePageComponents/SalesPitch";
 import Header from '../components/modules/Header';
 
 class Index extends React.Component {
-  componentDidMount = () => {
-    const user = localStorage.getItem("currentOpenSaucedUser");
-    if (user) {
-      this.setState({user: JSON.parse(user)});
-    } else {
-      loginUser();
-    }
-    netlifyIdentity.on("login", (user) => this.setState({user}, loginUser()));
-    netlifyIdentity.on("logout", (user) => this.setState({user: null}, logoutUser()));
-    }
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
