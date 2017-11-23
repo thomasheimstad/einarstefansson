@@ -10,21 +10,6 @@ import SalesPitch from "../components/HomePageComponents/SalesPitch";
 import Header from '../components/modules/Header';
 
 class Index extends React.Component {
-  handleScriptLoad() {
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on('init', user => {
-        if (!user) {
-          window.netlifyIdentity.on('login', () => {
-            document.location.href = '/admin/';
-          });
-        }
-      });
-    }
-    window.netlifyIdentity.init();
-  }
-  componentDidMount = () => {
-    this.handleScriptLoad();
-  }
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
