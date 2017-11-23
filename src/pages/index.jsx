@@ -11,6 +11,16 @@ import SalesPitch from "../components/HomePageComponents/SalesPitch";
 import Header from '../components/modules/Header';
 
 class Index extends React.Component {
+  componentDidMount = () => {
+    const user = localStorage.getItem("currentOpenSaucedUser");
+  if (user) {
+    this.setState({user: JSON.parse(user)});
+  } else {
+    loginUser();
+  }
+  netlifyIdentity.on("login", (user) => this.setState({user}, loginUser()));
+  netlifyIdentity.on("logout", (user) => this.setState({user: null}, logoutUser()));
+  }
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
