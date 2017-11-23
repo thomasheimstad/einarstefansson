@@ -40,6 +40,7 @@ export default class HTML extends React.Component {
           <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         </head>
         <body>
+          <div data-netlify-identity-menu></div>
           <div
             id="___gatsby"
             dangerouslySetInnerHTML={{ __html: this.props.body }}
