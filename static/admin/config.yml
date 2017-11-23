@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  repo: thomasheimstad/einarstefansson
   branch: master
 
 publish_mode: editorial_workflow
