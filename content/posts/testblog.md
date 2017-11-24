@@ -1,8 +1,8 @@
 ---
-category: upcoming
-title: Test
-date: 2017-11-24T01:49:57.962Z
-thumbnail: /src/images/Einar19.jpg
+category: "upcoming"
+title: "Test"
+date: "02/02/2018"
+thumbnail: ""/src/images/Einar19.jpg"
 tags:
     - test
     - cool
