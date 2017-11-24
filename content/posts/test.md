@@ -17,6 +17,6 @@ tags:
 
 Italics
 
-![Cool pose](/src/images/Einar11.jpg)
+![](/src/images/Einar11.jpg)
 
 And another paragraph beneath the picture!
