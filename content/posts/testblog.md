@@ -1,5 +1,5 @@
 ---
-category: blog
+category: upcoming
 title: Test
 date: 2017-11-24T01:49:57.962Z
 thumbnail: /src/images/Einar19.jpg
