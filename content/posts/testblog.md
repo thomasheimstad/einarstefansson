@@ -2,7 +2,7 @@
 category: "upcoming"
 title: "Test"
 date: "02/02/2018"
-thumbnail: ./Einar19.jpg
+thumbnail: "./Einar19.jpg"
 tags:
     - test
     - cool

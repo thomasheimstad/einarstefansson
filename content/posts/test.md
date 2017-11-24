@@ -4,7 +4,7 @@ cover: "https://unsplash.it/400/300/?random?BoldMage"
 date: "01/01/2017"
 category: "blog"
 startTime: "21:00"
-thumbnail: ./Einar1.jpg
+thumbnail: "./Einar1.jpg"
 tags:
     - test
     - cool
