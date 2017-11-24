@@ -1,8 +1,10 @@
 ---
-category: upcoming
-title: Test
-date: 2017-11-24T01:49:57.962Z
-thumbnail: /src/images/Einar19.jpg
+title: "Bold Mage"
+cover: "https://unsplash.it/400/300/?random?BoldMage"
+date: "01/01/2017"
+category: "blog"
+startTime: "21:00"
+thumbnail: "src/images/Einar1.jpg"
 tags:
     - test
     - cool
