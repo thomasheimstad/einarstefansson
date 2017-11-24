@@ -7,7 +7,7 @@ export default class Admin extends React.Component {
       script.src = "https://identity.netlify.com/v1/netlify-identity-widget.js";
       script.async = true;
 
-      document.getElementByID("adminDiv").appendChild(script);
+      document.getElementById("adminDiv").appendChild(script);
     }
   render = () => {
     return(
