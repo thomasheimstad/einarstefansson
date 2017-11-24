@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default class Admin extends React.Component {
-  componentWillMount () {
+  componentDidMount = () {
     const script = document.createElement("script");
 
     script.src = "https://unpkg.com/netlify-cms@^0.7.0/dist/cms.css";
