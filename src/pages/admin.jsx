@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { Component } from "react";
+import Helmet from "react-helmet";
 
-export default class Admin extends React.Component {
-  componentDidMount = () => {
-      const script = document.createElement("script");
+class Admin extends Component {
+  render() {
+    return (
+      <div className="admin">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <title>Content Manager</title>
 
-      script.src = "https://identity.netlify.com/v1/netlify-identity-widget.js";
-      script.async = true;
-
-      document.getElementById("adminDiv").appendChild(script);
-    }
-  render = () => {
-    return(
-      <div id="adminDiv"></div>
-    )
+          <link
+            rel="stylesheet"
+            href="https://unpkg.com/netlify-cms@^0.7.0/dist/cms.css"
+          />
+          <script src="https://unpkg.com/netlify-cms@^0.7.0/dist/cms.js" />
+        </Helmet>
+      </div>
+    );
   }
 }
+
+export default Admin;
