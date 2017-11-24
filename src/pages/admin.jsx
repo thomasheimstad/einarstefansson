@@ -1,17 +1,17 @@
 import React from 'react';
 
 export default class Admin extends React.Component {
-  componentDidMount = () {
-    const script = document.createElement("script");
+  componentWillMount () {
+      const script = document.createElement("script");
 
-    script.src = "https://unpkg.com/netlify-cms@^0.7.0/dist/cms.css";
-    script.async = true;
+      script.src = "https://identity.netlify.com/v1/netlify-identity-widget.js";
+      script.async = true;
 
-    document.body.appendChild(script);
-  }
+      document.body.appendChild(script);
+    }
   render = () => {
     return(
-      <div></div>
+
     )
   }
 }
