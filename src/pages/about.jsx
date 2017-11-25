@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Helmet from "react-helmet";
 import About from "../components/About/About";
 import Hero from "../components/modules/Hero";
-import Einar6 from "../images/Einar6.jpg";
+import Einar6 from "../img/Einar6.jpg";
 import config from "../../data/SiteConfig";
 
 class AboutPage extends Component {

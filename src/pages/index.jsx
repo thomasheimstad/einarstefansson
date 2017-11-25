@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import Hero from "../components/modules/Hero";
-import Einar7 from "../images/Einar7.jpg";
+import Einar7 from "../img/Einar7.jpg";
 import PostListing from "../components/PostListing/PostListing";
 import FadeInWrapper from "../components/modules/FadeInWrapper";
 import SalesPitch from "../components/HomePageComponents/SalesPitch";
