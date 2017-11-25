@@ -90,9 +90,11 @@
           overflow: hidden;
         }
         p {
+          padding: 0.6rem 0;
           margin-bottom: 0;
-          font-size: 12px;
+          font-size: 0.7rem;
           text-align: left;
+          line-height: 1rem;
         }
       }
       .showCards {

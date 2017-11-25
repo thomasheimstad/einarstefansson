@@ -21,8 +21,8 @@ export default class MainLayout extends React.Component {
     })
   }
   componentDidMount = () => {
-    setTimeout(() => this.setState({ isLoading: false }), 1000);
-    setTimeout(() => this.setState({ isComplete: true }), 1500);
+    setTimeout(() => this.setState({ isLoading: false }), 300);
+    setTimeout(() => this.setState({ isComplete: true }), 800);
   }
   getLocalTitle() {
     function capitalize(string) {

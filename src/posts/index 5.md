@@ -5,6 +5,7 @@ category: "upcoming"
 date: "17/03/2017"
 startTime: "10:00"
 location: "Bergen"
+description: "This is a great concert"
 tags:
     - programming
     - more tags

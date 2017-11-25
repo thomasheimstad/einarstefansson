@@ -11,8 +11,8 @@
     }
     .blogPost {
       background: $base-background-color;
-      .postTagContainer {
-
+      p, li {
+        font-size: 1rem;
       }
       @media screen and (max-width: 768px) {
         .postTagContainer {
@@ -31,6 +31,7 @@
     font-size: 12px;
     border-radius: 16px;
     transition: $base-in-duration $base-in-timing;
+    border: none;
     &:hover {
       background: darken($secondary-background-color, 15%);
     }

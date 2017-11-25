@@ -24,10 +24,10 @@ class Media extends React.Component {
 export default Media;
 /* eslint no-undef: "off"*/
 export const mediaQuery = graphql`
-  query UpcomingPages {
+  query MediaPages {
     allMarkdownRemark(
       limit: 100
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { fields: [frontmatter___position], order: ASC }
       filter: { frontmatter: { category: { eq: "media"} } }
     ) {
       totalCount
@@ -40,6 +40,7 @@ export const mediaQuery = graphql`
             youtubelink
             title
             description
+            position
           }
         }
       }
