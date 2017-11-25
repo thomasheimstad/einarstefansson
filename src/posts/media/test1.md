@@ -1,8 +1,9 @@
 ---
-title: "2. place"
-category: "media"
-youtubelink: "https://www.youtube.com/embed/lBnwDTAoAC8"
-position: "2"
-description: "This is me playing with the famous Keith Jarrett Standards-trio"
-thumbnail: "./mediadefault.jpg"
+category: media
+title: 2. place
+youtubelink: 'https://www.youtube.com/embed/3-0JZlrk4xA'
+position: '2'
+description: Here I'm singing with the great Robert Glasper Experiment
+thumbnail: ./mediadefault.jpg
 ---
+
