@@ -2,7 +2,7 @@ import React from "react";
 import Helmet from "react-helmet";
 import PostListing from "../components/PostListing/PostListing";
 import Hero from "../components/modules/Hero";
-import Einar16 from "../img/Einar16.jpg";
+import Einar16 from "../posts/img/Einar16.jpg";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 
