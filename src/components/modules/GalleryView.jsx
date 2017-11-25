@@ -39,13 +39,11 @@ export default class GalleryView extends React.Component {
     this.checkWindowWidth();
   }
   checkWindowWidth = () => {
-    this.state.windowWidth < 600 ?this.setState({showCardContent: false}) : this.setState({showCardContent: true})
+    this.state.windowWidth < 600 ? this.setState({showCardContent: false}) : this.setState({showCardContent: true})
   }
   componentDidMount = () => {
     window.addEventListener('resize', this.onWindowResize);
-    this.setState({
-      windowWidth: document.documentElement.clientWidth,
-    })
+    this.onWindowResize();
     this.checkWindowWidth();
   }
   componentWillUnmount = () => {
