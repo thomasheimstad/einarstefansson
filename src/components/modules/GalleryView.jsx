@@ -43,8 +43,9 @@ export default class GalleryView extends React.Component {
   }
   componentDidMount = () => {
     window.addEventListener('resize', this.onWindowResize);
-    this.onWindowResize();
-    this.checkWindowWidth();
+    setTimeout(() => {
+      this.onWindowResize();
+  }, 1)
   }
   componentWillUnmount = () => {
     window.removeEventListener('resize', this.onWindowResize);
@@ -69,7 +70,9 @@ export default class GalleryView extends React.Component {
           <div className="flex column"><h5>{this.props.date ? this.props.date : this.props.title}</h5>
             {this.checkH5content(this.props.category, this.props.timeToRead, this.props.startTime, this.props.title)}
           </div>
-          {this.state.windowWidth < 600 ? <div onClick={this.onClickHandler} className="iconWrapper flex center noBackground"><IconArrowDown className={"reactIcon "  + (this.state.rotater ? 'rotateTo' : 'rotateBack')}/></div> : ''}
+          {this.state.windowWidth < 600 ?
+            <div onClick={this.onClickHandler} className="iconWrapper flex center noBackground"><IconArrowDown className={"reactIcon "  + (this.state.rotater ? 'rotateTo' : 'rotateBack')}/></div> :
+             ''}
         </div>
         <div className={'flex postCardContent center column ' + (this.state.showCardContent ? 'showCards' : 'hideCards')}>
           <div><p>{this.props.excerpt ? this.props.excerpt : this.props.title}</p></div>
