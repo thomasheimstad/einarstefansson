@@ -8,6 +8,7 @@ location: "Bergen"
 tags:
     - tag
 thumbnail: "./img/Einar2.jpg"
+position: 1
 ---
 # Domos primus caelum taedia
 
