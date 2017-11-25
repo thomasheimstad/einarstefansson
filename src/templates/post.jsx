@@ -28,7 +28,7 @@ export default class PostTemplate extends React.Component {
         <SEO postPath={slug} postNode={postNode} postSEO />
         {/*<Hero id={post.id} src={post.thumbnail.childImageSharp.responsiveSizes.src} headerSize="1.5"/>*/}
         <div className="postContent flex center column">
-          <Header title={post.title} />
+          <Header title={post.title} concertDate={post.concertDate} startTime={post.startTime} location={post.location} />
           <div className="blogPost">
             <Hero id={post.id} src={post.thumbnail.childImageSharp.responsiveSizes.src} headerSize="2"/>
             <div className="basePad">
@@ -61,6 +61,8 @@ export const pageQuery = graphql`
         cover
         date
         category
+        concertDate
+        location
         startTime
         tags
         thumbnail {

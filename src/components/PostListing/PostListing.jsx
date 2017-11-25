@@ -29,6 +29,18 @@ class PostListing extends React.Component {
     });
     return postList;
   }
+  formatDate = (date) => {
+    let monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+    let d = new Date(date),
+    month = '' + (d.getMonth() + 1),
+    day = '' + d.getDate(),
+    year = d.getFullYear();
+    month = monthNames[d.getMonth()];
+
+    return [day, month, year].join(' ');
+  }
   render() {
     let defaultPostList = (...props) => {
       return (
@@ -59,7 +71,7 @@ class PostListing extends React.Component {
       return (
         <FadeInWrapper id={props[0]}>
           <Link to={props[6]}>
-          <h2>{props[2]}</h2>
+          <h2>{this.formatDate(props[2])}</h2>
           <h3>{props[0]}</h3>
           <h4>{props[3] ? props[3] : 'TBA'}</h4>
           <h4>{props[5]}</h4>
@@ -69,6 +81,7 @@ class PostListing extends React.Component {
     }
     let checkView = (props) => {
       if (this.state.view == "galleryView") {
+        let formatedDate = this.formatDate(props.concertDate);
       return(
         <GalleryView
           src = {props.thumbnail.childImageSharp.responsiveSizes.src}
@@ -79,7 +92,7 @@ class PostListing extends React.Component {
           path = {props.path}
           timeToRead = {props.timeToRead}
           category = {props.category}
-          concertDate = {props.concertDate}
+          concertDate = {formatedDate}
           startTime={props.startTime} />
       )
     } else if (this.state.view == "mediaView") {
