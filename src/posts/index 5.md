@@ -3,6 +3,7 @@ title: "The Butterfly of the Edge"
 cover: "https://unsplash.it/1152/300/?random?TheButterflyoftheEdge"
 category: "upcoming"
 date: "17/03/2017"
+concertDate: "01/04/2018"
 startTime: "10:00"
 location: "Bergen"
 description: "This is a great concert"
@@ -13,7 +14,7 @@ tags:
     - another one
     - stuff
     - other
-thumbnail: "./img/Einar3.jpg"
+thumbnail: "img/Einar3.jpg"
 ---
 # Hanc indeploratum seram Amphitryoniadae tremulis pauperque manum
 

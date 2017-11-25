@@ -22,6 +22,7 @@ class PostListing extends React.Component {
         thumbnail: postEdge.node.frontmatter.thumbnail,
         youtubelink: postEdge.node.frontmatter.youtubelink,
         description: postEdge.node.frontmatter.description,
+        concertDate: postEdge.node.frontmatter.concertDate,
         startTime: postEdge.node.frontmatter.startTime,
         location: postEdge.node.frontmatter.location
       });
@@ -68,11 +69,23 @@ class PostListing extends React.Component {
     }
     let checkView = (props) => {
       if (this.state.view == "galleryView") {
-      return(<GalleryView src = {props.thumbnail.childImageSharp.responsiveSizes.src} title = {props.title} date = {props.date} excerpt = {props.excerpt} tags = {props.tags} path = {props.path} timeToRead = {props.timeToRead} category = {props.category} startTime={props.startTime}/>)
+      return(
+        <GalleryView
+          src = {props.thumbnail.childImageSharp.responsiveSizes.src}
+          title = {props.title}
+          date = {props.date}
+          excerpt = {props.excerpt}
+          tags = {props.tags}
+          path = {props.path}
+          timeToRead = {props.timeToRead}
+          category = {props.category}
+          concertDate = {props.concertDate}
+          startTime={props.startTime} />
+      )
     } else if (this.state.view == "mediaView") {
         return(mediaPostList(props.title, props.youtubelink, props.description))
       } else if (this.state.view == "upcomingView") {
-        return(upcomingList(props.title, props.description, props.date, props.startTime, props.tags, props.location, props.path))
+        return(upcomingList(props.title, props.description, props.concertDate, props.startTime, props.tags, props.location, props.path))
       } else { return(defaultPostList(props.title, props.date)) }
     }
 

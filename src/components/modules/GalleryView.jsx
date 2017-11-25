@@ -10,6 +10,17 @@ export default class GalleryView extends React.Component {
     windowWidth: '',
     rotater: false
   }
+  formatDate = (date) => {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+
+    return [year, month, day].join('-');
+}
   checkH5content = (category,timeToRead,startTime,title) => {
 
     if(category == "blog") {
@@ -67,7 +78,7 @@ export default class GalleryView extends React.Component {
         </Link>
         <div className="flex postCardTitle">
           <div className="flex center iconWrapper noPointer"><IconCalendar className="reactIcon"/></div>
-          <div className="flex column"><h5>{this.props.date ? this.props.date : this.props.title}</h5>
+          <div className="flex column"><h5>{this.props.concertDate ? this.formatDate(this.props.concertDate) : this.props.title}</h5>
             {this.checkH5content(this.props.category, this.props.timeToRead, this.props.startTime, this.props.title)}
           </div>
           {this.state.windowWidth < 600 ?

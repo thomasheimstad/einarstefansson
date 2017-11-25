@@ -46,6 +46,7 @@ export const pageQuery = graphql`
             title
             description
             tags
+            concertDate
             startTime
             cover
             date

@@ -41,6 +41,7 @@ export const upcomingQuery = graphql`
             cover
             date
             category
+            concertDate
             startTime
             location
             thumbnail {

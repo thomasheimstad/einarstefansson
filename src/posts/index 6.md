@@ -7,7 +7,7 @@ startTime: "10:00"
 location: "Bergen"
 tags:
     - tag
-thumbnail: "./img/Einar2.jpg"
+thumbnail: "img/Einar2.jpg"
 ---
 # Domos primus caelum taedia
 
