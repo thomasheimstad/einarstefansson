@@ -1,9 +1,9 @@
 ---
 category: media
-title: Testing this
+title: Bach English Suites
 youtubelink: 'https://www.youtube.com/embed/N-HZpXnjXM0'
 position: '3'
-description: Testdescription
+description: My recent recordings of Bach's English suites.
 thumbnail: ./mediadefault.jpg
 ---
 
