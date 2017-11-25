@@ -7,4 +7,4 @@ tags:
   - term_1
   - term_2
 ---
-![qool](./img/img_9405 bw2.jpg)
+kjhjk
