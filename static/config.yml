@@ -29,3 +29,4 @@ collections:
       - {label: "YouTube link", name: "youtubeLink", widget: "string"}
       - {label: "Position", name: "position", widget: "number"}
       - {label: "Description", name: "description", widget: "text"}
+      - {label: "Image", name: "thumbnail", widget: "hidden", default: "./mediadefault.jpg"}
