@@ -63,6 +63,7 @@ export const pageQuery = graphql`
         category
         startTime
         tags
+        position
         thumbnail {
           childImageSharp {
             responsiveSizes(maxWidth: 1920, quality: 50, cropFocus: CENTER, toFormat: JPG) {
