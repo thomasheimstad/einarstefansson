@@ -25,7 +25,7 @@ export const upcomingQuery = graphql`
   query UpcomingQuery {
     allMarkdownRemark(
       limit: 100
-      sort: { fields: [frontmatter___date], order: ASC }
+      sort: { fields: [frontmatter___concertDate], order: ASC }
       filter: { frontmatter: { category: { eq: "upcoming"} } }
     ) {
       edges {

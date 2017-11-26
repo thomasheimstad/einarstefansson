@@ -32,7 +32,7 @@ export const pageQuery = graphql`
   query IndexQuery {
     allMarkdownRemark(
       limit: 6
-      sort: { fields: [frontmatter___date], order: ASC }
+      sort: { fields: [frontmatter___concertDate], order: ASC }
       filter: { frontmatter: { category: { eq: "upcoming"} } }
     ) {
       edges {
