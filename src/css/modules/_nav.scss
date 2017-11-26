@@ -152,6 +152,10 @@
 }
 @media (max-width: 640px){
   .mainNavBar {
+    height: 3rem;
+    h4 {
+      text-align: left;
+    }
     div ul {
       justify-content: space-between;
     }
