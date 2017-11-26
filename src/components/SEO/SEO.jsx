@@ -15,12 +15,12 @@ class SEO extends Component {
       description = postMeta.description
         ? postMeta.description
         : postNode.excerpt;
-      image = postMeta.cover;
+      image = postMeta.thumbnail.childImageSharp.responsiveSizes.src;
       postURL = config.siteUrl + config.pathPrefix + postPath;
     } else {
       title = config.siteTitle;
       description = config.siteDescription;
-      image = config.siteLogo;
+      image = config.siteImage;
     }
     const realPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
     image = config.siteUrl + realPrefix + image;
