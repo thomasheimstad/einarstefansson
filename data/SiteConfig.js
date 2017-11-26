@@ -3,7 +3,6 @@ module.exports = {
   siteTitle: "Einar Stefansson", // Site title.
   siteTitleAlt: "Barytone's website", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-  siteImage: "/static/Einar7.jpg",
   siteUrl: "http://www.einarstefansson.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription: "Homepage Einar Stefansson, classical barytone singer", // Website description used for RSS feeds/meta description tag.

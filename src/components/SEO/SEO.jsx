@@ -16,14 +16,14 @@ class SEO extends Component {
         ? postMeta.description
         : postNode.excerpt;
       image = postMeta.thumbnail.childImageSharp.responsiveSizes.src;
-      postURL = config.siteUrl + config.pathPrefix + postPath;
+      postURL = config.siteUrl + postPath;
     } else {
       title = config.siteTitle;
       description = config.siteDescription;
-      image = config.siteImage;
+      image = this.props.pageImg ? this.props.pageImg : config.siteLogo;
     }
     const realPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
-    image = config.siteUrl + realPrefix + image;
+    image = this.props.pageImg ? image : config.siteUrl + realPrefix + image;
     const blogURL = config.siteUrl + config.pathPrefix;
     const schemaOrgJSONLD = [
       {

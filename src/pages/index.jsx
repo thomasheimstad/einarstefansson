@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
 import Hero from "../components/modules/Hero";
-import Einar7 from "../posts/img/Einar7.jpg";
+import Einar from "../posts/img/Einar7.jpg";
 import PostListing from "../components/PostListing/PostListing";
 import FadeInWrapper from "../components/modules/FadeInWrapper";
 import SalesPitch from "../components/HomePageComponents/SalesPitch";
@@ -15,8 +15,8 @@ class Index extends React.Component {
     return (
       <div className="index-container">
         <Helmet title={config.siteTitle} />
-        <SEO postEdges={postEdges}  />
-        <Hero id="indexPage" src={Einar7} bgpos="80% 30%" headerSize="1.1"/>
+        <SEO postEdges={postEdges} pageImg={Einar} />
+        <Hero id="indexPage" src={Einar} bgpos="80% 30%" headerSize="1.1"/>
         <Header title="Upcoming" />
         <PostListing postEdges={postEdges} view="galleryView" title="Upcoming Concerts"/>
 
