@@ -46,7 +46,8 @@
           transition: $base-in-duration $base-in-timing;
         }
         &:hover::before {
-          opacity: 0.3;
+          opacity: 0.2;
+          background: black;
         }
         div {
           position: absolute;

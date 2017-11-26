@@ -39,7 +39,6 @@ export const pageQuery = graphql`
             category
             startTime
             tags
-            cover
             date
           }
         }

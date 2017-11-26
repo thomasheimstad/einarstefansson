@@ -88,6 +88,7 @@ class PostListing extends React.Component {
           title = {props.title}
           date = {props.date}
           excerpt = {props.excerpt}
+          description = {props.description}
           tags = {props.tags}
           path = {props.path}
           timeToRead = {props.timeToRead}

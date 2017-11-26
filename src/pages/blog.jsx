@@ -44,9 +44,9 @@ export const postQuery = graphql`
           timeToRead
           frontmatter {
             title
+            description
             tags
             category
-            cover
             date
             thumbnail {
               childImageSharp {

@@ -78,7 +78,7 @@ export default class GalleryView extends React.Component {
              ''}
         </div>
         <div className={'flex postCardContent center column ' + (this.state.showCardContent ? 'showCards' : 'hideCards')}>
-          <div><p>{this.props.excerpt ? this.props.excerpt : this.props.title}</p></div>
+          <div><p>{this.props.description ? this.props.description : this.props.excerpt}</p></div>
           {/*<div className="flex center row wrap">{this.props.tags ? this.props.tags.map(x=>{return <Link key={x} to={"tags/" + x.replace(" ", "-")}>{x}</Link>}) : 'failed'}
         </div> */}
         <PostTags tags={this.props.tags} />

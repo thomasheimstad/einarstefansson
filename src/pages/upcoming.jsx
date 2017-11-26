@@ -33,12 +33,12 @@ export const upcomingQuery = graphql`
           fields {
             slug
           }
-          excerpt
+          excerpt(pruneLength: 100)
           timeToRead
           frontmatter {
             title
+            description
             tags
-            cover
             date
             category
             concertDate

@@ -1,12 +1,13 @@
 ---
 title: "Birch in the Roses"
-cover: "https://unsplash.it/1152/300/?random?BirchintheRoses"
 date: "01/03/2017"
 category: "blog"
+concertDate: "03/11/2018"
 startTime: "10:00"
 location: "Bergen"
+description: "Great stuff"
 tags:
-    - tag
+    - styles
 thumbnail: img/Einar2.jpg
 ---
 # Domos primus caelum taedia

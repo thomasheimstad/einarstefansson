@@ -40,7 +40,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
-          excerpt(pruneLength: 75)
+          excerpt(pruneLength: 100)
           timeToRead
           frontmatter {
             title
@@ -48,7 +48,6 @@ export const pageQuery = graphql`
             tags
             concertDate
             startTime
-            cover
             date
             category
             location
