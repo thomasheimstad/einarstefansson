@@ -14,11 +14,19 @@ tags:
     - another one
     - stuff
     - other
-thumbnail: "img/Einar3.jpg"
+thumbnail: img/Einar3.jpg
 ---
 # Hanc indeploratum seram Amphitryoniadae tremulis pauperque manum
 
 ## Cognoscenti audeat ulterius sublimia terga potiorque saxo
+
+![test](img/Einar3.jpg)
+
+![test](img/Einar19.jpg)
+
+![test](img/Einar18.jpg)
+
+![test](img/img_9405bw1.jpg)
 
 Lorem markdownum, quid fuerat Procne saxo asperitas variarum Iuno humili
 sermone! Tibi Oileos [unda](http://nuncet.org/hic-gens.php), lux celeberrima

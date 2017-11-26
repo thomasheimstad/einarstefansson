@@ -10,6 +10,9 @@ export default class GalleryView extends React.Component {
     windowWidth: '',
     rotater: false
   }
+  consoleLog = (word) => {
+    console.log(word);
+  }
   checkH5content = (category,timeToRead,startTime,title) => {
 
     if(category == "blog") {
@@ -67,7 +70,7 @@ export default class GalleryView extends React.Component {
         </Link>
         <div className="flex postCardTitle">
           <div className="flex center iconWrapper noPointer"><IconCalendar className="reactIcon"/></div>
-          <div className="flex column"><h5>{this.props.concertDate ? this.props.concertDate : this.props.title}</h5>
+          <div className="flex column"><h5>{this.props.concertDate === "NaN  NaN" ? this.props.title : this.props.concertDate}</h5>
             {this.checkH5content(this.props.category, this.props.timeToRead, this.props.startTime, this.props.title)}
           </div>
           {this.state.windowWidth < 600 ?

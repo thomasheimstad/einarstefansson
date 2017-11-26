@@ -37,7 +37,7 @@ export default class Hero extends React.Component {
   }
   render = () => {
     let styles = {
-      backgroundImage: `url(${this.props.src})`,
+      backgroundImage: `url("${this.props.src}")`,
       height: this.state.windowWidth > 768 ? this.state.windowHeight/this.props.headerSize : this.state.windowHeight/this.props.headerSize/1.5,
       backgroundPosition: this.props.bgpos
     }

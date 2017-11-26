@@ -30,7 +30,7 @@ export default class PostTemplate extends React.Component {
         <div className="postContent flex center column">
           <Header title={post.title} concertDate={post.concertDate} startTime={post.startTime} location={post.location} />
           <div className="blogPost">
-            <Hero id={post.id} src={post.thumbnail.childImageSharp.responsiveSizes.src} headerSize="2"/>
+            <Hero id={post.title} src={post.thumbnail.childImageSharp.responsiveSizes.src} headerSize="2"/>
             <div className="basePad">
               <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
               <div className="post-meta">
