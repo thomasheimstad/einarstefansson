@@ -15,12 +15,12 @@ class Admin extends Component {
 
           <link
             rel="stylesheet"
-            href="https://unpkg.com/netlify-cms@^0.7.5/dist/cms.css"
+            href="https://unpkg.com/netlify-cms@^0.7.0/dist/cms.css"
           />
           <link
             rel="stylesheet"
             href="../css/index.scss" />
-          <script src="https://unpkg.com/netlify-cms^0.7.5/dist/cms.js" />
+          <script src="https://unpkg.com/netlify-cms@^0.7.0/dist/cms.js" />
         </Helmet>
       </div>
     );
