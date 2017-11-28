@@ -5,7 +5,7 @@ date: 2017-11-25T20:04:44.484Z
 concertDate: "03/09/2018"
 startTime: "19:30"
 location: "Live stream on www.streamtesting.com"
-thumbnail: img/Einar5.jpg
+thumbnail: ./img/Einar5.jpg
 tags:
   - contemporary
   - testing

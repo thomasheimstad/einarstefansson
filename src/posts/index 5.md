@@ -11,7 +11,7 @@ tags:
     - more tags
     - testing
     - other
-thumbnail: img/Einar3.jpg
+thumbnail: ./img/Einar3.jpg
 ---
 # Hanc indeploratum seram Amphitryoniadae tremulis pauperque manum
 

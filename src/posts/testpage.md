@@ -5,7 +5,7 @@ date: 2017-11-25T20:04:44.484Z
 concertDate: "02/05/2018"
 startTime: "19:30"
 location: "New York"
-thumbnail: img/img_9401bw1.jpg
+thumbnail: ./img/img_9401bw1.jpg
 tags:
   - contemporary
   - testing
