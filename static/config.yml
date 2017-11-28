@@ -9,7 +9,7 @@ collections:
     label: "Blog" # Used in the UI
     folder: "src/posts" # The path to the folder where the documents are stored
     filter:
-      field: name
+      field: category
       value: blog
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
@@ -24,7 +24,7 @@ collections:
     label: "Upcoming concerts" # Used in the UI
     folder: "src/posts" # The path to the folder where the documents are stored
     filter:
-      field: name
+      field: category
       value: upcoming
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
