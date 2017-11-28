@@ -8,21 +8,14 @@ import ScrollBar from '../components/modules/ScrollBar';
 import Footer from '../components/modules/Footer';
 import '../css/index.scss';
 import config from "../../data/SiteConfig";
-let updater = false;
 export default class MainLayout extends React.Component {
   state = {
-    showNav: false,
-    isLoading: true,
-    isComplete: false,
+    showNav: false
   }
   handleClick = () => {
     this.setState({
       showNav: !this.state.showNav
     })
-  }
-  componentDidMount = () => {
-    setTimeout(() => this.setState({ isLoading: false }), 300);
-    setTimeout(() => this.setState({ isComplete: true }), 800);
   }
   getLocalTitle() {
     function capitalize(string) {
@@ -68,7 +61,6 @@ export default class MainLayout extends React.Component {
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
-        {this.state.isComplete ? '' : <Fade in={this.state.isLoading} timeout={500}><Loader /></Fade>}
         <NavBar showNav={this.state.showNav} handleClick={this.handleClick} />
         <Nav showNav={this.state.showNav} handleClick={this.handleClick} />
         <ScrollBar />
