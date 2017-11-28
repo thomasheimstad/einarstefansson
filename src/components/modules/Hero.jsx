@@ -42,8 +42,10 @@ export default class Hero extends React.Component {
       backgroundPosition: this.props.bgpos
     }
     return (
-      <div className="hero flex center" id={this.props.id} style={styles}>
-        <div className="overcast" style={{ opacity: -this.state.scrollTop / 500 }} ></div>
+      <div className="hero flex center">
+        <div id={this.props.id} style={styles}>
+          <div className="overcast" style={{ opacity: -this.state.scrollTop / 500 }} ></div>
+        </div>
       </div>
     )
   }
