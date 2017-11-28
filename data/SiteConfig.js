@@ -36,6 +36,6 @@ module.exports = {
     }
   ],
   copyright: "Copyright © 2017. Einar Stefansson", // Copyright string for the footer of the website and RSS feed.
-  themeColor: "#c62828", // Used for setting manifest and progress theme colors.
-  backgroundColor: "#e0e0e0" // Used for setting manifest background color.
+  themeColor: "#3D9970", // Used for setting manifest and progress theme colors.
+  backgroundColor: "#FDFEFD" // Used for setting manifest background color.
 };
