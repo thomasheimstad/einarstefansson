@@ -1,7 +1,5 @@
 import React from "react";
 import Helmet from "react-helmet";
-import Fade from '../components/modules/Fade';
-import Loader from '../components/modules/Loader';
 import Nav from '../components/modules/Nav';
 import NavBar from '../components/modules/NavBar';
 import ScrollBar from '../components/modules/ScrollBar';
