@@ -5,7 +5,7 @@ export default class Hero extends React.Component {
   state = {
     scrollTop : 0,
     windowWidth: '',
-    windowHeight: ''
+    windowHeight: '1024'
   }
   handleScroll = () => {
     let distance = document.getElementById(`${this.props.id}`).getBoundingClientRect().top;
