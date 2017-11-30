@@ -21,3 +21,5 @@ This is ordinary text.
 * This is an unordered list.
 
 1. This is an ordered list.
+
+![Einar Stefansson holding his hands out in front of his face](/src/posts/img/Einar15.jpg)
