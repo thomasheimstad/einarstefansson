@@ -6,7 +6,7 @@ thumbnail: ./img/img_9401bw1.jpg
 tags:
   - contemporary
   - testing
-concertDate: 2018-01-18T21:00:44+01:00
+concertDate: 2018-01-18T19:30:44+01:00
 startTime: '19:30'
 location: New York
 ---
