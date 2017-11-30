@@ -2,7 +2,7 @@
 category: blog
 title: This is the Title
 date: 2017-11-30T20:58:36.702Z
-thumbnail: ./img/Einar3.jpg
+thumbnail: ./img/Einar11.jpg
 tags:
   - funfact
   - information
