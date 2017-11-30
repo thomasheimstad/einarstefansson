@@ -8,24 +8,49 @@ class PostListing extends React.Component {
     view: this.props.view
   }
   getPostList() {
+    let today = new Date().toISOString();
+    console.log(today);
+
     const postList = [];
     this.props.postEdges.forEach(postEdge => {
-      postList.push({
-        path: postEdge.node.fields.slug,
-        tags: postEdge.node.frontmatter.tags,
-        cover: postEdge.node.frontmatter.cover,
-        title: postEdge.node.frontmatter.title,
-        date: postEdge.node.frontmatter.date,
-        category: postEdge.node.frontmatter.category,
-        excerpt: postEdge.node.excerpt,
-        timeToRead: postEdge.node.timeToRead,
-        thumbnail: postEdge.node.frontmatter.thumbnail,
-        youtubelink: postEdge.node.frontmatter.youtubelink,
-        description: postEdge.node.frontmatter.description,
-        concertDate: postEdge.node.frontmatter.concertDate,
-        startTime: postEdge.node.frontmatter.startTime,
-        location: postEdge.node.frontmatter.location
-      });
+      let gettime = '';
+      if(postEdge.node.frontmatter.concertDate) {gettime = postEdge.node.frontmatter.concertDate}
+      console.log(gettime);
+      if(postEdge.node.frontmatter.position || postEdge.node.frontmatter.category === "blog") {
+        postList.push({
+          path: postEdge.node.fields.slug,
+          tags: postEdge.node.frontmatter.tags,
+          cover: postEdge.node.frontmatter.cover,
+          title: postEdge.node.frontmatter.title,
+          date: postEdge.node.frontmatter.date,
+          category: postEdge.node.frontmatter.category,
+          excerpt: postEdge.node.excerpt,
+          timeToRead: postEdge.node.timeToRead,
+          thumbnail: postEdge.node.frontmatter.thumbnail,
+          youtubelink: postEdge.node.frontmatter.youtubelink,
+          description: postEdge.node.frontmatter.description,
+          concertDate: postEdge.node.frontmatter.concertDate,
+          startTime: postEdge.node.frontmatter.startTime,
+          location: postEdge.node.frontmatter.location
+        });
+      } else if(postEdge.node.frontmatter.concertDate > today ) {
+        postList.push({
+          path: postEdge.node.fields.slug,
+          tags: postEdge.node.frontmatter.tags,
+          cover: postEdge.node.frontmatter.cover,
+          title: postEdge.node.frontmatter.title,
+          date: postEdge.node.frontmatter.date,
+          category: postEdge.node.frontmatter.category,
+          excerpt: postEdge.node.excerpt,
+          timeToRead: postEdge.node.timeToRead,
+          thumbnail: postEdge.node.frontmatter.thumbnail,
+          youtubelink: postEdge.node.frontmatter.youtubelink,
+          description: postEdge.node.frontmatter.description,
+          concertDate: postEdge.node.frontmatter.concertDate,
+          startTime: postEdge.node.frontmatter.startTime,
+          location: postEdge.node.frontmatter.location
+        });
+      }
     });
     return postList;
   }

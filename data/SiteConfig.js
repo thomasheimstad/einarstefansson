@@ -8,7 +8,7 @@ module.exports = {
   siteDescription: "Homepage Einar Stefansson, classical barytone singer", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights
-  googleAnalyticsID: "", // GA tracking ID.
+  googleAnalyticsID: "UA-110489649-1", // GA tracking ID.
   disqusShortname: "http-einar-stefansson", // Disqus shortname.
   postDefaultCategoryID: "Upcoming", // Default category for posts.
   userName: "Einar Stefansson", // Username to display in the author segment.

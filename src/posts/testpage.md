@@ -2,7 +2,7 @@
 category: upcoming
 title: Debut at Carnegie
 date: 2017-11-25T20:04:44.484Z
-concertDate: "02/05/2018"
+concertDate: 2017-11-25T20:04:44.484Z
 startTime: "19:30"
 location: "New York"
 thumbnail: ./img/img_9401bw1.jpg

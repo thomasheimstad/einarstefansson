@@ -2,7 +2,7 @@
 category: upcoming
 title: Testing The Test
 date: 2017-11-26T16:40:33.494Z
-concertDate: "03/10/2018"
+concertDate: 2019-11-25T20:04:44.484Z
 startTime: "21:00"
 location: "Manchester"
 thumbnail: ./img/Einar4.jpg

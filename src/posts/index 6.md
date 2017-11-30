@@ -2,7 +2,7 @@
 title: "Birch in the Roses"
 date: "01/03/2017"
 category: "blog"
-concertDate: "03/11/2018"
+concertDate: 2017-11-25T20:04:44.484Z
 startTime: "10:00"
 location: "Bergen"
 description: "Great stuff"

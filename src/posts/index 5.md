@@ -2,7 +2,7 @@
 title: "The Butterfly of the Edge"
 category: "upcoming"
 date: "17/03/2017"
-concertDate: "01/04/2018"
+concertDate: 2017-11-25T20:04:44.484Z
 startTime: "10:00"
 location: "Bergen"
 description: "This is a description. Either it shows the description, or it shows an excerpt. Quite cool, no?"
