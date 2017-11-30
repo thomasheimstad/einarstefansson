@@ -16,7 +16,7 @@ class PostListing extends React.Component {
       let gettime = '';
       if(postEdge.node.frontmatter.concertDate) {gettime = postEdge.node.frontmatter.concertDate}
       console.log(gettime);
-      if(postEdge.node.frontmatter.position || postEdge.node.frontmatter.category === "blog") {
+      if(postEdge.node.frontmatter.position || postEdge.node.frontmatter.category === "blog" || this.props.tags) {
         postList.push({
           path: postEdge.node.fields.slug,
           tags: postEdge.node.frontmatter.tags,
