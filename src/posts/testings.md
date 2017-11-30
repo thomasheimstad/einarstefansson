@@ -2,12 +2,12 @@
 category: upcoming
 title: Another test
 date: 2017-11-26T16:20:29.979Z
-concertDate: 2017-12-25T20:04:44.484Z
-location: "Royal Albert Hall, London"
-startTime: "18:30"
 thumbnail: ./img/moterom1bw.jpg
 tags:
   - renaissance
+concertDate: 2017-12-25T12:00:00+01:00
+startTime: '12:00'
+location: 'Royal Albert Hall, London'
 ---
 # Supersunt Prothoenora arida moturaque fuerit demissaque aut
 
