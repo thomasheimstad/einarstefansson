@@ -2,13 +2,13 @@
 category: upcoming
 title: Concert Test
 date: 2017-11-25T20:04:44.484Z
-concertDate: 2017-11-25T20:04:44.484Z
-startTime: "19:30"
-location: "Live stream on www.streamtesting.com"
 thumbnail: ./img/Einar5.jpg
 tags:
   - contemporary
   - testing
+concertDate: 2018-01-30T21:04:44+01:00
+startTime: '21:04'
+location: Live stream on www.streamtesting.com
 ---
 # Hunc adventare duxit lacrimis hospes futurum fecerat
 
