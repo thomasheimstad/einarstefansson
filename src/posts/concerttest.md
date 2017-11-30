@@ -6,8 +6,8 @@ thumbnail: ./img/Einar5.jpg
 tags:
   - contemporary
   - testing
-concertDate: 2018-01-30T21:04:44+01:00
-startTime: '21:04'
+concertDate: 2018-03-07T19:00:44+01:00
+startTime: '19:00'
 location: Live stream on www.streamtesting.com
 ---
 # Hunc adventare duxit lacrimis hospes futurum fecerat
