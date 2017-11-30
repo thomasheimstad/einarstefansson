@@ -2,12 +2,12 @@
 category: upcoming
 title: Testing The Test
 date: 2017-11-26T16:40:33.494Z
-concertDate: 2019-11-25T20:04:44.484Z
-startTime: "21:00"
-location: "Manchester"
 thumbnail: ./img/Einar4.jpg
 tags:
   - contemporary
+concertDate: 2019-11-25T21:00:44+01:00
+startTime: '21:00'
+location: Manchester
 ---
 # Domos primus caelum taedia
 
