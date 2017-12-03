@@ -11,6 +11,7 @@
     width: $base-width;
     max-width: $blog-width;
     margin: 0 auto;
+    display: block;
     h2, h3 {
       text-align: left;
       margin-right: auto;
@@ -29,7 +30,7 @@
     	height: 0;
       overflow: hidden;
     }
-    .videoWrapper iframe {
+    .videoWrapper iframe, .videoWrapper object, .videoWrapper embed {
     	position: absolute;
     	top: 0;
     	left: 0;
