@@ -22,4 +22,4 @@ This is ordinary text.
 
 1. This is an ordered list.
 
-![Einar Stefansson holding his hands out in front of his face](./img/Einar15.jpg)
+![Einar Stefansson](./img/Einar15.jpg)
