@@ -14,7 +14,6 @@
       }
     }
     ul:first-of-type {
-      flex: 1;
       justify-content: flex-start;
       margin-right: auto;
       li {
@@ -23,8 +22,7 @@
       }
     }
     ul {
-      flex: 6;
-      flex-grow: 1;
+      flex: 1;
       justify-content: center;
       text-align: center;
       margin-left: 0;
@@ -44,7 +42,6 @@
         }
       }
       &:last-of-type{
-        flex: 1;
         justify-content: flex-end;
         li:last-of-type{
           padding-right: 0;
@@ -71,7 +68,7 @@
           margin: 0 auto;
         }
         &:nth-of-type(2){
-          padding: 3rem 0;
+          padding: 2rem 0;
         }
         li {
           font-size: 14px;

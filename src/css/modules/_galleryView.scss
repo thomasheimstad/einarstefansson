@@ -5,13 +5,11 @@
   flex-direction: row;
   justify-content: center;
   align-content: center;
-  margin: 0 auto;
   padding-top: 0;
   > div {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: 20rem;
-    max-width: 30rem;
     margin: 8px;
     > div {
       padding: 8px;
@@ -94,6 +92,7 @@
         div {
           padding: 0 1rem;
           overflow: hidden;
+          width: 100%;
         }
         p {
           padding: 0.6rem 0;

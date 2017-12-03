@@ -133,7 +133,7 @@ class PostListing extends React.Component {
       <div className={`${this.state.view} basePad`} >
         {/* Your post list here. */
         postList.map(post =>
-          <div key={post.title}>
+          <div key={post.title} >
               {/* {post.thumbnail.childImageSharp.responsiveSizes.src.length > 0 ? <img src={post.thumbnail.childImageSharp.responsiveSizes.src} data-src={post.thumbnail.childImageSharp.responsiveSizes.src} data-srcset={post.thumbnail.childImageSharp.responsiveSizes.srcSet} data-sizes={post.thumbnail.childImageSharp.responsiveSizes.sizes} className="lazyload" alt={post.title}/> : ''} */}
               {/* Chech for returned thumbnail image. Return header  */}
               {checkView(post)}
