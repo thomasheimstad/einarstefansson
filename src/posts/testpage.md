@@ -2,11 +2,11 @@
 category: upcoming
 title: Debut at Carnegie
 date: 2017-11-25T20:04:44.484Z
-thumbnail: ./img/img_9401bw1.jpg
+thumbnail: ./img/cindarella.jpg
 tags:
   - opera
   - french
-concertDate: 2017-12-06T19:30:44+00:00
+concertDate: 2017-12-06T19:30:44.000Z
 startTime: '19:30'
 location: Manchester
 ---
