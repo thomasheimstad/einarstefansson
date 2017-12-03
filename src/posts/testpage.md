@@ -1,12 +1,13 @@
 ---
 category: upcoming
-title: Debut at Carnegie
+title: Cendrillon
 date: 2017-11-25T20:04:44.484Z
 thumbnail: ./img/cinderella.jpg
 tags:
   - opera
   - french
   - RNCM
+  - chorus
 concertDate: 2017-12-06T19:30:44.000Z
 startTime: '19:30'
 location: Manchester
