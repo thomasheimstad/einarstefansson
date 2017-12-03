@@ -2,7 +2,7 @@
 category: upcoming
 title: Debut at Carnegie
 date: 2017-11-25T20:04:44.484Z
-thumbnail: ./img/cindarella.jpg
+thumbnail: ./img/cinderella.jpg
 tags:
   - opera
   - french
