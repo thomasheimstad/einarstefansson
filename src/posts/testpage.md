@@ -4,11 +4,11 @@ title: Debut at Carnegie
 date: 2017-11-25T20:04:44.484Z
 thumbnail: ./img/img_9401bw1.jpg
 tags:
-  - contemporary
-  - testing
-concertDate: 2018-01-18T19:30:44+01:00
+  - opera
+  - french
+concertDate: 2017-12-06T19:30:44+00:00
 startTime: '19:30'
-location: New York
+location: Manchester
 ---
 # Lorem markdownum nunc fuerat vulgaris ipse
 
