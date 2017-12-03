@@ -1,13 +1,14 @@
 ---
 category: upcoming
-title: Another test
+title: Christmas Concert with Edvard Grieg Kor
 date: 2017-11-26T16:20:29.979Z
-thumbnail: ./img/moterom1bw.jpg
+thumbnail: ./img/egkjulekonsert.jpg
 tags:
-  - renaissance
-concertDate: 2017-12-25T12:00:00+01:00
+  - christmas
+  - choral
+concertDate: 2017-12-18T18:00:00+00:00
 startTime: '12:00'
-location: 'Royal Albert Hall, London'
+location: 'Bergen Domkirke, Bergen'
 ---
 # Supersunt Prothoenora arida moturaque fuerit demissaque aut
 
