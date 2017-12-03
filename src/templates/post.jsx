@@ -10,6 +10,18 @@ import config from "../../data/SiteConfig";
 import Hero from "../components/modules/Hero";
 
 export default class PostTemplate extends React.Component {
+  formatDate = (date) => {
+    let monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+    let d = new Date(date),
+    month = '' + (d.getMonth() + 1),
+    day = '' + d.getDate(),
+    year = d.getFullYear();
+    month = monthNames[d.getMonth()];
+
+    return [day, month, year].join(' ');
+  }
   render() {
     const { slug } = this.props.pathContext;
     const postNode = this.props.data.markdownRemark;
@@ -28,7 +40,7 @@ export default class PostTemplate extends React.Component {
         <SEO postPath={slug} postNode={postNode} postSEO />
         {/*<Hero id={post.id} src={post.thumbnail.childImageSharp.responsiveSizes.src} headerSize="1.5"/>*/}
         <div className="postContent flex center column">
-          <Header title={post.title} concertDate={post.concertDate} startTime={post.startTime} location={post.location} />
+          <Header title={post.title} date={this.formatDate(post.date)} concertDate={this.formatDate(post.concertDate)} startTime={post.startTime} location={post.location} />
           <div className="blogPost">
             <Hero id={post.title} src={post.thumbnail.childImageSharp.responsiveSizes.src} headerSize="2"/>
             <div className="basePad">

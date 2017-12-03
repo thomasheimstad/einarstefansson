@@ -17,9 +17,10 @@ export default class Header extends React.Component {
     return(
       <div className="flex header column center basePad">
         <h1>{this.props.title}</h1>
-        {this.props.concertDate ?
-          <div className="flex row center"><h3>{this.props.concertDate}</h3><h4>{this.props.startTime}</h4><h4>{this.props.location}</h4></div>
-          : '' }
+        {this.props.concertDate != '1 Jan 1970'?
+          <div className="flex row center"><h3>{this.props.concertDate}</h3><h4>{this.props.startTime}</h4><h4>{this.props.location}</h4></div> :
+          <div className="flex column center"><h3>{this.props.date}</h3><h4>{this.props.startTime}</h4><h4>{this.props.location}</h4></div>
+        }
       </div>
     )
   }

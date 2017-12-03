@@ -9,13 +9,11 @@ class PostListing extends React.Component {
   }
   getPostList() {
     let today = new Date().toISOString();
-    console.log(today);
 
     const postList = [];
     this.props.postEdges.forEach(postEdge => {
       let gettime = '';
       if(postEdge.node.frontmatter.concertDate) {gettime = postEdge.node.frontmatter.concertDate}
-      console.log(gettime);
       if(postEdge.node.frontmatter.position || postEdge.node.frontmatter.category === "blog" || this.props.tags) {
         postList.push({
           path: postEdge.node.fields.slug,

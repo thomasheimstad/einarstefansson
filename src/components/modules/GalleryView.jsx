@@ -10,9 +10,6 @@ export default class GalleryView extends React.Component {
     windowWidth: '',
     rotater: false
   }
-  consoleLog = (word) => {
-    console.log(word);
-  }
   checkH5content = (category,timeToRead,startTime,title) => {
 
     if(category == "blog") {
