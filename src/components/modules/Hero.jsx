@@ -5,7 +5,7 @@ export default class Hero extends React.Component {
   state = {
     scrollTop : 0,
     windowWidth: '',
-    windowHeight: '1024'
+    windowHeight: ''
   }
   handleScroll = () => {
     let distance = document.getElementById(`${this.props.id}`).getBoundingClientRect().top;
@@ -25,11 +25,12 @@ export default class Hero extends React.Component {
           windowHeight: y
         })
   }
-  componentWillMount = () => {
+  componentDidMount = () => {
+    this.setState({
+      windowWidth: window.innerWidth || document.documentElement.clientWidth || document.documentElement.getElementsByTagName('body')[0].clientWidth
+    })
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
-  }
-  componentDidMount = () => {
     window.addEventListener('scroll', this.handleScroll);
     this.handleScroll();
   }
