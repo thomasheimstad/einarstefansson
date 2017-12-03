@@ -25,9 +25,11 @@ export default class Hero extends React.Component {
           windowHeight: y
         })
   }
-  componentDidMount = () => {
+  componentWillMount = () => {
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
+  }
+  componentDidMount = () => {
     window.addEventListener('scroll', this.handleScroll);
     this.handleScroll();
   }
