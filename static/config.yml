@@ -1,6 +1,9 @@
 backend:
   name: git-gateway
   branch: master
+  accept_roles:
+    - owner
+    - lead
 
 publish_mode: editorial_workflow
 media_folder: "src/posts/img" # Media files will be stored in the repo under images/uploads
