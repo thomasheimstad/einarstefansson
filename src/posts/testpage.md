@@ -6,7 +6,7 @@ thumbnail: ./img/img_9401bw1.jpg
 tags:
   - contemporary
   - testing
-concertDate: 2018-01-18T19:30:44+01:00
+concertDate: 2018-01-18T18:30:44.000Z
 startTime: '19:30'
 location: New York
 ---
@@ -24,14 +24,3 @@ altus **de vesper** membra blanditiis aethera orgia.
 3. Stupet eiusdem paventem meum
 
 ## Supersunt Prothoenora arida moturaque fuerit demissaque aut
-
-Hunc adventare duxit lacrimis hospes futurum fecerat inde manus reditum annos,
-fuerat usque foedus mihi, priscum? Amanti tu costis occursu: dentes alios,
-adflabitur poteram. Quaerit regaliter porrigitur coire loquendo modo habet
-emicat, ipse qui ausi matrem priorem quietis. Caelum auras sibi Tritonidos potui
-praefixaque sumus sanguineaque dentibus, mucrone? Saucius iuvenis sunt.
-
-Ita ultor restituit tollere. Ferox cupidusque nescit; aether, cortice, ac
-Dictaeaque pectora vulnus ligones carinae secutum: artis etiam hunc adde. Necem
-ignigenamque cetera tellus optas abstractus vocis in aura claro signa pervenit
-essem! Turbatque aequora remanet accepit in digitos, refert reus sanguine.
