@@ -6,7 +6,6 @@ thumbnail: ./img/Einar11.jpg
 tags:
   - funfact
   - information
-  - casual
 ---
 # THIS IS H1
 
