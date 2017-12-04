@@ -37,7 +37,7 @@ export const mediaQuery = graphql`
             slug
           }
           frontmatter {
-            youtubelink
+            medialink
             title
             description
             position

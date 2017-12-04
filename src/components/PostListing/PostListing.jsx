@@ -25,7 +25,7 @@ class PostListing extends React.Component {
           excerpt: postEdge.node.excerpt,
           timeToRead: postEdge.node.timeToRead,
           thumbnail: postEdge.node.frontmatter.thumbnail,
-          youtubelink: postEdge.node.frontmatter.youtubelink,
+          medialink: postEdge.node.frontmatter.medialink,
           description: postEdge.node.frontmatter.description,
           concertDate: postEdge.node.frontmatter.concertDate,
           startTime: postEdge.node.frontmatter.startTime,
@@ -42,7 +42,7 @@ class PostListing extends React.Component {
           excerpt: postEdge.node.excerpt,
           timeToRead: postEdge.node.timeToRead,
           thumbnail: postEdge.node.frontmatter.thumbnail,
-          youtubelink: postEdge.node.frontmatter.youtubelink,
+          medialink: postEdge.node.frontmatter.medialink,
           description: postEdge.node.frontmatter.description,
           concertDate: postEdge.node.frontmatter.concertDate,
           startTime: postEdge.node.frontmatter.startTime,
@@ -104,6 +104,10 @@ class PostListing extends React.Component {
             </div>
           </FadeInWrapper>
         )
+      } else {
+        return (
+          ''
+        )
       }
     }
     let upcomingList = (...props) => {
@@ -136,7 +140,7 @@ class PostListing extends React.Component {
           startTime={props.startTime} />
       )
     } else if (this.state.view == "mediaView") {
-        return(mediaPostList(props.title, props.youtubelink, props.description))
+        return(mediaPostList(props.title, props.medialink, props.description))
       } else if (this.state.view == "upcomingView") {
         return(upcomingList(props.title, props.description, props.concertDate, props.startTime, props.tags, props.location, props.path))
       } else { return(defaultPostList(props.title, props.date)) }
