@@ -7,12 +7,8 @@ tags:
   - lieder
   - RNCM
   - competition
-<<<<<<< HEAD
-concertDate: 2018-05-01T18:00:44+01:00
-=======
   - solo
-concertDate: 2018-05-01T17:00:44.000Z
->>>>>>> 79a439d9e26ec2cc4896006306129c513cdf5e79
+concertDate: 2018-05-01T18:00:44.000Z
 startTime: '18:00'
 location: 'RNCM, Manchester'
 ---
