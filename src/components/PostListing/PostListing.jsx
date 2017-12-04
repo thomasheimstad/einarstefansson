@@ -76,19 +76,35 @@ class PostListing extends React.Component {
       )
     }
     let mediaPostList = (...props) => {
-      return (
-        <FadeInWrapper id={props[0]} >
-          <div className="flex column videoCard">
-            <div className="basePad">
-              <h2>{props[0]}</h2>
-              <h3>{props[2]}</h3>
+      if(props[1].indexOf("youtube") !== -1) {
+        return (
+          <FadeInWrapper id={props[0]} >
+            <div className="flex column videoCard">
+              <div className="basePad">
+                <h2>{props[0]}</h2>
+                <h3>{props[2]}</h3>
+              </div>
+              <div className="videoWrapper">
+                <iframe width="560" height="349" src={props[1]} frameBorder="0" allowFullScreen></iframe>
+              </div>
             </div>
-            <div className="videoWrapper">
-              <iframe width="560" height="349" src={props[1]} frameBorder="0" allowFullScreen></iframe>
-          </div>
-        </div>
-      </FadeInWrapper>
-      )
+          </FadeInWrapper>
+        )
+      } else if (props[1].indexOf("soundcloud") !== -1) {
+        return (
+          <FadeInWrapper id={props[0]} >
+            <div className="flex column videoCard">
+              <div className="basePad">
+                <h2>{props[0]}</h2>
+                <h3>{props[2]}</h3>
+              </div>
+              <div className="soundcloudWrapper">
+                <iframe src={props[1]} frameBorder="0" allowFullScreen></iframe>
+              </div>
+            </div>
+          </FadeInWrapper>
+        )
+      }
     }
     let upcomingList = (...props) => {
       return (
