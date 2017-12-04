@@ -12,4 +12,4 @@ location: Manchester
 ---
 # Berlioz and a World Premier
 
-## Lunchtime concert in Manchester, performing the cycle _Irlande _by H. Berlioz and new pieces commissioned for the occasion
+## Lunchtime concert in Manchester, performing the cycle Irlande by H. Berlioz and new pieces commissioned for the occasion

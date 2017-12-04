@@ -14,4 +14,4 @@ location: Manchester
 ---
 # Massenet's Cendrillon at RNCM
 
-Jules Massenet's _Cendrillon _at the RNCM, 6-16 December 2017. Conducted by Martin André, directed by Olivia Fuchs. Please see the RNCM's website for more info and tickets: <https://www.rncm.ac.uk/performance/cendrillon/>
+Jules Massenet's Cendrillon at the RNCM, 6-16 December 2017. Conducted by Martin André, directed by Olivia Fuchs. Please see the RNCM's website for more info and tickets: <https://www.rncm.ac.uk/performance/cendrillon/>
