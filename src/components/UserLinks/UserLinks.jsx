@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import config from "../../../data/SiteConfig";
+import "./UserLinks.css";
 
 class UserLinks extends Component {
   getLinkElements() {

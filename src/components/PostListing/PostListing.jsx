@@ -143,7 +143,9 @@ class PostListing extends React.Component {
         return(mediaPostList(props.title, props.medialink, props.description))
       } else if (this.state.view == "upcomingView") {
         return(upcomingList(props.title, props.description, props.concertDate, props.startTime, props.tags, props.location, props.path))
-      } else { return(defaultPostList(props.title, props.date)) }
+      } else {
+        return(defaultPostList(props.title, props.date))
+      }
     }
 
     const postList = this.getPostList();

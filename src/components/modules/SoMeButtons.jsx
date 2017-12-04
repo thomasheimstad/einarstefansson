@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { FaFacebook, FaEnvelope, FaPhone, FaYoutube } from 'react-icons/lib/fa/';
+import { FaSoundcloud, FaTwitter } from 'react-icons/lib/fa/';
 export default class SoMeButtons extends Component {
   state = {
     iconSize: '',
@@ -30,10 +30,8 @@ export default class SoMeButtons extends Component {
 
     return (
       <ul className="flex center">
-        <li><FaEnvelope size={this.state.iconSize}/></li>
-        <li><FaPhone size={this.state.iconSize}/></li>
-        <li><FaFacebook size={this.state.iconSize}/></li>
-        <li><FaYoutube size={this.state.iconSize}/></li>
+        <li><a href="https://soundcloud.com/einarstefansson" target="_blank"><FaSoundcloud size={this.state.iconSize}/></a></li>
+        <li><a href="https://twitter.com/EinarStefansson" target="_blank"><FaTwitter size={this.state.iconSize}/></a></li>
       </ul>
     )
   }

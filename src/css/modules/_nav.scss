@@ -101,13 +101,15 @@
         font-size: 20px;
         margin-bottom: 3px;
       }
-      a {
-        padding: 15px;
-        display: block;
-        border-left: 2px solid transparent;
-        &:hover {
-          color: $navigation-color;
-        }
+    }
+    a {
+      padding: 1rem;
+      display: block;
+      border-left: 2px solid transparent;
+      transition: $base-in-duration $base-in-timing;
+      &:hover h4{
+        transition: $base-in-duration $base-in-timing;
+        color: $navigation-color;
       }
     }
     .active {
@@ -159,7 +161,7 @@
     div ul {
       justify-content: space-between;
     }
-    div ul li a {
+    div ul a {
       padding: 1.5rem 0;
     }
     div ul li {

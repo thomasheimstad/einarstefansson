@@ -16,11 +16,8 @@ class Footer extends Component {
     return (
       <footer className="footer flex column center basePad ">
         <div className="flex wrap center">
-          <ul className="flex">
-            <li><Link to="/"><h3>LOGO</h3></Link></li>
-          </ul>
           <NavLinks />
-          <SoMeButtons config={config}/>
+          <SoMeButtons config={config} />
         </div>
         {/* <UserLinks config={config} labeled /> */}
         <div className="flex row center">

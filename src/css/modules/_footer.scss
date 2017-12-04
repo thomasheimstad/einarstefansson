@@ -6,7 +6,7 @@
   > div:first-of-type {
     min-width: 90%;
     border-bottom: 1px solid $secondary-background-color;
-    li, h3 {
+    a {
       transition: $base-in-duration $base-in-timing;
       &:hover {
         cursor: pointer;
@@ -16,10 +16,6 @@
     ul:first-of-type {
       justify-content: flex-start;
       margin-right: auto;
-      li {
-        padding: 1rem;
-        margin: 0;
-      }
     }
     ul {
       flex: 1;
@@ -30,22 +26,17 @@
       flex-direction: row;
       flex-flow: row;
       padding-bottom: $base-padding-y;
-      li {
-        margin: 0.3rem;
+      a {
+        padding: 1rem 0.5rem;
         text-transform: uppercase;
         white-space: nowrap;
         display: block;
         font-weight: 700;
         letter-spacing: 1px;
-        a {
-          padding: 0.2rem;
-        }
+        margin: 0;
       }
       &:last-of-type{
         justify-content: flex-end;
-        li:last-of-type{
-          padding-right: 0;
-        }
       }
       .active {
         color: $action-color;
@@ -57,33 +48,33 @@
       align-items: center;
       flex-wrap: wrap;
       div {
+        display: flex;
         justify-content: center;
         margin: 0;
       }
       ul {
+        display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         padding: 0;
         &:first-of-type {
-          justify-content: center;
-          margin: 0 auto;
+          margin: 0;
+          flex-direction: column;
+          a {
+            padding: 0.4rem;
+          }
         }
         &:nth-of-type(2){
-          padding: 2rem 0;
-        }
-        li {
-          font-size: 14px;
+          padding: 1rem 0 0;
         }
       }
     }
   }
   > div:last-of-type {
     padding-top: 1rem;
+    width: 50%;
     h6 {
       font-weight: 100;
     }
-  }
-}
-@media screen and (max-width: 810px) {
-  footer {
   }
 }

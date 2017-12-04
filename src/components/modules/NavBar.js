@@ -28,7 +28,7 @@ export default class NavBar extends React.Component{
         <div className={`mainNavBar ${this.state.invis}`}>
           <div className="mainNavBarHeader">
               <div onClick={this.props.handleClick}><h4>menu</h4></div>
-              <Link to="/"><h3>Einar Stefansson</h3></Link>
+              <Link to="/"><h3>Einar Stefánsson</h3></Link>
               <p></p>
           </div>
         </div>

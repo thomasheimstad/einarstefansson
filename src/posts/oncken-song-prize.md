@@ -8,7 +8,6 @@ tags:
   - songs
   - RNCM
   - competition
-  - ''
 concertDate: 2018-05-01T18:00:44+01:00
 startTime: '18:00'
 location: 'RNCM, Manchester'
