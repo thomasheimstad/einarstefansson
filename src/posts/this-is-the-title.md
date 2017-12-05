@@ -1,6 +1,6 @@
 ---
 category: blog
-title: This is the Title
+title: Blog test
 date: 2017-11-30T20:58:36.702Z
 thumbnail: ./img/Møterom3.jpg
 tags:
