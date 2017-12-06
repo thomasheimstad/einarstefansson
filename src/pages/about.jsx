@@ -7,7 +7,6 @@ import config from "../../data/SiteConfig";
 
 class AboutPage extends Component {
   render() {
-    const data = this.props.data;
     return (
       <div className="about flex center column">
         <Helmet title={`About | ${config.siteTitle}`} />
