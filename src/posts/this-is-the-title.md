@@ -12,3 +12,5 @@ tags:
 
 
 ![Einar Stefansson](./img/Einar15.jpg)
+
+delete test
