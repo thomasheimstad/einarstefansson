@@ -1,6 +1,13 @@
 .post {
   background: $secondary-background-color;
   width: 100%;
+  a {
+    transition: $base-in-timing $base-in-duration;
+    &:hover {
+      transition: $base-in-timing $base-in-duration;
+      color: $action-color;
+    }
+  }
   .postContent {
     > h1 {
       margin: 0;
