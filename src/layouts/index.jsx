@@ -58,6 +58,7 @@ export default class MainLayout extends React.Component {
         <Helmet>
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
+          <meta name="google-site-verification" content={config.googleSiteVerification} />
         </Helmet>
         <NavBar showNav={this.state.showNav} handleClick={this.handleClick} />
         <Nav showNav={this.state.showNav} handleClick={this.handleClick} />

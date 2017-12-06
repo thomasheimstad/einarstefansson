@@ -9,6 +9,7 @@ module.exports = {
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights
   googleAnalyticsID: "UA-110489649-1", // GA tracking ID.
+  googleSiteVerification:"50rsHWZrrfLMTSRzSnDL7Y4dSxvHi30CMtA7nUPw8-s",
   disqusShortname: "http-einar-stefansson", // Disqus shortname.
   postDefaultCategoryID: "Upcoming", // Default category for posts.
   userName: "Einar Stefánsson", // Username to display in the author segment.
