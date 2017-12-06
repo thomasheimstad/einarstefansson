@@ -1,11 +1,11 @@
 module.exports = {
   blogPostDir: "posts", // The name of directory that contains your posts.
-  siteTitle: "Einar Stefánsson", // Site title.
-  siteTitleAlt: "A barytone's website", // Alternative site title for SEO.
+  siteTitle: "Einar Stefánsson | classical bass singer", // Site title.
+  siteTitleAlt: "Homepage of the Norwegian bass singer Einar Stefánsson", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
   siteUrl: "http://www.einarstefansson.com", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: "Homepage Einar Stefánsson, classical barytone singer", // Website description used for RSS feeds/meta description tag.
+  siteDescription: "Einar Stefánsson, classical bass singer", // Website description used for RSS feeds/meta description tag.
   siteRss: "/rss.xml", // Path to the RSS file.
   siteFBAppID: "", // FB Application ID for using app insights
   googleAnalyticsID: "UA-110489649-1", // GA tracking ID.

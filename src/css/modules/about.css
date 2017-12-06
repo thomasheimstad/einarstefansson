@@ -1,0 +1,23 @@
+.about {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    min-height: 300px;
+    ul {
+      margin: 0;
+      li {
+        padding: 0;
+        margin: 0;
+      }
+      a {
+        transition: $base-in-duration $base-in-timing;
+        padding: 1rem 0.5rem;
+        &:hover {
+          cursor: pointer;
+          color: $action-color;
+          transition: $base-in-duration $base-in-timing;
+        }
+      }
+    }
+}

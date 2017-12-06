@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Link from "gatsby-link";
 import NavLinks from "./NavLinks";
 import UserLinks from "../UserLinks/UserLinks";
+import Contact from "./Contact";
 import SoMeButtons from "./SoMeButtons";
 import config from "../../../data/SiteConfig";
 
@@ -17,6 +18,7 @@ class Footer extends Component {
       <footer className="footer flex column center basePad ">
         <div className="flex wrap center">
           <NavLinks />
+          <Contact />
           <SoMeButtons config={config} />
         </div>
         {/* <UserLinks config={config} labeled /> */}

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-
-import "./About.css";
+import Contact from "../modules/Contact";
+import SoMeButtons from "../modules/SoMeButtons";
 
 class About extends Component {
   style = {
@@ -24,7 +24,13 @@ class About extends Component {
           <p>
             Recent highlights include performances at Bergen National Opera’s opera festival ‘Mimì Goes Glamping’ in Norway, as a soloist in Ariel Ramirez’ ‘Misa Criolla’, and appearances as a pop-up opera artist during the World Cycling Championship in Bergen, Norway.
           </p>
-        </div></div>
+          <div className="flex column center">
+            <ul><li><h2>Contact information</h2></li></ul>
+            <Contact />
+            <SoMeButtons />
+          </div>
+          </div>
+        </div>
       </div>
     );
   }

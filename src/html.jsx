@@ -34,10 +34,9 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          <meta name="Site Creator" content="www.thomasheimstad.com" />
           {this.props.headComponents}
           <link rel="shortcut icon" href={favicon} />
-        
-
 
           {css}
         </head>

@@ -14,6 +14,7 @@ collections:
       field: category
       value: blog
     create: true # Allow users to create new documents in this collection
+    delete: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Category", name: "category", widget: "hidden", default: "blog"}
@@ -29,6 +30,7 @@ collections:
       field: category
       value: upcoming
     create: true # Allow users to create new documents in this collection
+    delete: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Category", name: "category", widget: "hidden", default: "upcoming"}
@@ -44,6 +46,7 @@ collections:
     label: "Media" # Used in the UI
     folder: "src/posts/media" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
+    delete: true
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Category", name: "category", widget: "hidden", default: "media"}

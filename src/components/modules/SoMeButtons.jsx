@@ -24,10 +24,6 @@ export default class SoMeButtons extends Component {
     window.removeEventListener("resize", this.handleResize);
   }
   render() {
-    const {config} = this.props;
-    const url = config.siteUrl;
-    const title = config.siteTitle;
-
     return (
       <ul className="flex center">
         <li><a href="https://soundcloud.com/einarstefansson" target="_blank"><FaSoundcloud size={this.state.iconSize}/></a></li>
