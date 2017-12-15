@@ -9,4 +9,6 @@ tags:
 ---
 # Welcome to my new website!
 
-## Thanks for stopping by, and please return for updates and upcoming concerts!
+## Thanks for stopping by. Here you can find out about what I have been doing in the past and upcoming projects. More content will be added with time, so please return for updates and more exciting news, pictures and recordings!
+
+## Einar
