@@ -6,7 +6,7 @@ import Hero from "../components/modules/Hero";
 import Einar from "../posts/img/Einar7.jpg";
 import PostListing from "../components/PostListing/PostListing";
 import FadeInWrapper from "../components/modules/FadeInWrapper";
-import SalesPitch from "../components/HomePageComponents/SalesPitch";
+import SalesPitch from "../components/modules/SalesPitch";
 import Header from '../components/modules/Header';
 
 class Index extends React.Component {
@@ -16,10 +16,10 @@ class Index extends React.Component {
       <div className="index-container">
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} pageImg={Einar} />
-        <Hero id="indexPage" src={Einar} bgpos="80% 30%" headerSize="1.1"/>
+        <Hero id="indexPage" src={Einar} bgpos="80% 40%" headerSize="1.667" forName="Einar" lastName="Stefánsson" classification="Classical Bass Singer" />
+        <SalesPitch />
         <Header title="Upcoming" />
         <PostListing postEdges={postEdges} view="galleryView" title="Upcoming Concerts"/>
-
       </div>
     );
   }

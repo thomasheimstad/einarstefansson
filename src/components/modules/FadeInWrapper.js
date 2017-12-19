@@ -23,7 +23,7 @@ export default class FadeInWrapper extends React.Component {
   }
   render () {
     return (
-        <div id={this.props.id} className={this.state.percentage <= 80 ? 'fadeIn' : 'fadeOut'}>
+        <div id={this.props.id} className={this.state.percentage <= 85 ? 'fadeIn' : 'fadeOut'}>
           {this.props.children}
       </div>
     )

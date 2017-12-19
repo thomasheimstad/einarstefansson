@@ -5,7 +5,7 @@ export default class Hero extends React.Component {
   state = {
     scrollTop : 0,
     windowWidth: '',
-    windowHeight: '1024'
+    windowHeight: '600'
   }
   handleScroll = () => {
     let distance = document.getElementById(`${this.props.id}`).getBoundingClientRect().top;
@@ -38,13 +38,21 @@ export default class Hero extends React.Component {
   render = () => {
     let styles = {
       backgroundImage: `url("${this.props.src}")`,
-      height: this.state.windowWidth > 768 ? this.state.windowHeight/this.props.headerSize : this.state.windowHeight/this.props.headerSize/1.5,
+      height: this.state.windowWidth > 768 ? this.state.windowHeight/this.props.headerSize : this.state.windowHeight/this.props.headerSize,
       backgroundPosition: this.props.bgpos
     }
     return (
       <div className="hero flex center">
         <div id={this.props.id} style={styles}>
           <div className="overcast" style={{ opacity: -this.state.scrollTop / 500 }} ></div>
+          {/* {this.props.forName ?
+            <div className="flex">
+              <div className="flex center">
+                <h1>{this.props.forName}</h1>
+                <h1>{this.props.lastName}</h1>
+                <h1>{this.props.classification}</h1>
+            </div>
+          </div> : ''} */}
         </div>
       </div>
     )

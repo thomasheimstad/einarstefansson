@@ -6,6 +6,27 @@
     background-position: center;
     height: 100%;
     width: 100%;
+    > div:last-child {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      align-items: flex-end;
+      justify-content: center;
+      > div {
+        height: auto;
+        width: auto;
+        padding: 0.5rem;
+        border-radius: 2%;
+        margin: 0;
+        h1 {
+          text-transform: uppercase;
+          font-weight: 100;
+          padding: 0.5rem;
+          color: $action-color;
+        }
+      }
+    }
   }
   .overcast {
     height: 100%;
