@@ -1,10 +1,16 @@
 .salesPitch {
   background: $secondary-background-color;
   flex-direction: row;
-  background-image: -moz-linear-gradient(45deg, rgba(51, 51, 51, 0.25) 25%, transparent 25%, transparent 75%, rgba(51, 51, 51, 0.25) 75%, rgba(51, 51, 51, 0.25)), -moz-linear-gradient(45deg, rgba(51, 51, 51, 0.25) 25%, transparent 25%, transparent 75%, rgba(51, 51, 51, 0.25) 75%, rgba(51, 51, 51, 0.25));
+  /* background-image: -moz-linear-gradient(45deg, rgba(51, 51, 51, 0.25) 25%, transparent 25%, transparent 75%, rgba(51, 51, 51, 0.25) 75%, rgba(51, 51, 51, 0.25)), -moz-linear-gradient(45deg, rgba(51, 51, 51, 0.25) 25%, transparent 25%, transparent 75%, rgba(51, 51, 51, 0.25) 75%, rgba(51, 51, 51, 0.25));
   background-image: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.25) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, .25) 75%, rgba(0, 0, 0, .25)), -webkit-linear-gradient(45deg, rgba(0, 0, 0, .25) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, .25) 75%, rgba(0, 0, 0, .25));
-  background-position: 0 0pt, 2px 2px;background-size: 4px 4px;background-color: #202125;
+  background-position: 0 0pt, 2px 2px;
+  background-size: 4px 4px;
+  background-color: #202125;
+  */
+  background: linear-gradient(30deg, $secondary-background-color 50%, $black 50%);
   text-align: center;
+  padding-bottom: 0;
+  
   .iconWrapper {
     background: inherit;
     margin-left: 0.01rem;
@@ -16,8 +22,7 @@
   > div {
     flex: 1;
     margin: 8px;
-    background: radial-gradient($base-background-color, darken($secondary-background-color, 10%));
-    border: 1px solid $secondary-background-color;
+    color: darken($secondary-background-color, 50%);
     padding: 3rem;
     border-radius: 2px;
     p, h2 {
@@ -35,6 +40,10 @@
       margin-left: 9px;
       font-size: 2.5rem;
       text-align: center;
+    }
+    .closeIcon {
+      margin: 0;
+      padding: 0;
     }
   }
   @media screen and (max-width: 768px) {

@@ -16,7 +16,7 @@ class Index extends React.Component {
       <div className="index-container">
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} pageImg={Einar} />
-        <Hero id="indexPage" src={Einar} bgpos="80% 40%" headerSize="1.667" forName="Einar" lastName="Stefánsson" classification="Classical Bass Singer" />
+        <Hero id="indexPage" src={Einar} bgpos="80% 40%" headerSize="1.3" forName="Einar" lastName="Stefánsson" classification="Classical Bass Singer" />
         <SalesPitch />
         <Header title="Upcoming" />
         <PostListing postEdges={postEdges} view="galleryView" title="Upcoming Concerts"/>

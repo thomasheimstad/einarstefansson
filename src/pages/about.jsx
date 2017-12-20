@@ -10,7 +10,7 @@ class AboutPage extends Component {
     return (
       <div className="about flex center column">
         <Helmet title={`About | ${config.siteTitle}`} />
-        <Hero id="aboutPage" src={Einar6} bgpos="30% 20%" headerSize="1.667"/>
+        <Hero id="aboutPage" src={Einar6} bgpos="30% 30%" headerSize="1.3"/>
         <About />
       </div>
     );

@@ -14,7 +14,7 @@ class Media extends React.Component {
       <div className="mediaView">
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
-        <Hero id="mediaPage" src={Einar16} bgpos="60% 10%" headerSize="1.667"/>
+        <Hero id="mediaPage" src={Einar16} bgpos="60% 10%" headerSize="1.3"/>
         <PostListing postEdges={postEdges} view="mediaView"/>
       </div>
     );

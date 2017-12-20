@@ -18,7 +18,7 @@ export default class SalesPitch extends React.Component {
       </FadeInWrapper>
       <FadeInWrapper id="salesPitch2">
         <div className="flex center column">
-          <p><TiFlag /><TiFlagOutline /></p>
+          <p><TiFlag className="closeIcon"/><TiFlagOutline className="closeIcon"/></p>
           <h2>Icelandic/Norwegian</h2>
           <p>Multinational</p>
         </div>
