@@ -16,7 +16,7 @@ class Index extends React.Component {
       <div className="index-container">
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} pageImg={Einar} />
-        <Hero id="indexPage" src={Einar} bgpos="80% 40%" headerSize="1.3" forName="Einar" lastName="Stefánsson" classification="Classical Bass Singer" />
+        <Hero id="indexID" src={this.props.data.file.childImageSharp.sizes} height="600" position="50% 30%"/>
         <SalesPitch />
         <Header title="Upcoming" />
         <PostListing postEdges={postEdges} view="galleryView" title="Upcoming Concerts"/>
@@ -53,15 +53,21 @@ export const pageQuery = graphql`
             location
             thumbnail {
               childImageSharp {
-                responsiveSizes(quality: 50, cropFocus: CENTER, toFormat: JPG) {
-                  src
-                  srcSet
-                  sizes
-                  base64
+                sizes(maxWidth: 400, maxHeight: 300, quality: 80) {
+                  ...GatsbyImageSharpSizes
                 }
               }
             }
           }
+        }
+      }
+    }
+    file(relativePath: { regex: "/Einar7/"  }) {
+      childImageSharp {
+        # Specify the image processing steps right in the query
+        # Makes it trivial to update as your page's design changes.
+        sizes(maxWidth: 1920, maxHeight: 1100, quality: 80) {
+          ...GatsbyImageSharpSizes
         }
       }
     }

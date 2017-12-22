@@ -3,6 +3,8 @@
 /* eslint global-require:"off" */
 import React from "react";
 import favicon from "./favicon.png";
+import objectFitImages from 'object-fit-images';
+
 
 let inlinedStyles = "";
 if (process.env.NODE_ENV === "production") {
@@ -16,6 +18,9 @@ if (process.env.NODE_ENV === "production") {
 }
 
 export default class HTML extends React.Component {
+  componentDidMount = () => {
+    objectFitImages();
+  }
   render() {
     let css;
     if (process.env.NODE_ENV === "production") {

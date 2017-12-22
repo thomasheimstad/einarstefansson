@@ -9,7 +9,7 @@ export default class Nav extends React.Component{
     return (
       <nav className={this.props.showNav ? 'showing navigator' : 'hidden navigator'}>
         <div>
-          <div className="logo"><p onClick={this.props.showNav ? this.props.handleClick : ''}>X</p></div>
+          <div className="logo"><p onClick={this.props.handleClick}>X</p></div>
           <NavLinks handleClick={this.props.handleClick} />
         </div>
       </nav>

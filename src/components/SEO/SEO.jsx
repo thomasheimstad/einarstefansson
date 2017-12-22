@@ -15,7 +15,7 @@ class SEO extends Component {
       description = postMeta.description
         ? postMeta.description
         : postNode.excerpt;
-      image = postMeta.thumbnail.childImageSharp.responsiveSizes.src;
+      image = postMeta.thumbnail.childImageSharp.sizes.src;
       postURL = config.siteUrl + postPath;
     } else {
       title = config.siteTitle;

@@ -63,7 +63,7 @@ export default class MainLayout extends React.Component {
         <NavBar showNav={this.state.showNav} handleClick={this.handleClick} />
         <Nav showNav={this.state.showNav} handleClick={this.handleClick} />
         <ScrollBar />
-        <div className={this.state.showNav ? 'overlay' : 'overlayOut'} onClick={this.state.showNav ? this.handleClick : ''}></div>
+        <div className={this.state.showNav ? 'overlay' : 'overlayOut'} onClick={this.handleClick}></div>
         <div>
           {children()}
         </div>

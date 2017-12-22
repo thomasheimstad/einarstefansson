@@ -127,7 +127,7 @@ class PostListing extends React.Component {
         let formatedDate = this.formatDate(props.concertDate);
       return(
         <GalleryView
-          src = {props.thumbnail.childImageSharp.responsiveSizes.src}
+          src = {props.thumbnail.childImageSharp.sizes}
           title = {props.title}
           date = {props.date}
           excerpt = {props.excerpt}

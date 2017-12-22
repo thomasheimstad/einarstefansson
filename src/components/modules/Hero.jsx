@@ -1,4 +1,5 @@
 import React from 'react';
+import BgImage from "./BgImage";
 import DownArrow from 'react-icons/lib/fa/angle-down';
 
 export default class Hero extends React.Component {
@@ -25,6 +26,13 @@ export default class Hero extends React.Component {
           windowHeight: y
         })
   }
+  checkWidth = () => {
+    if(this.state.windowWidth > 768) {
+      this.props.height
+    } else {
+    this.props.height/2
+    }
+  }
   componentDidMount = () => {
     this.handleResize();
     window.addEventListener('resize', this.handleResize);
@@ -36,15 +44,17 @@ export default class Hero extends React.Component {
     window.removeEventListener('resize', this.handleResize);
   }
   render = () => {
-    let styles = {
-      backgroundImage: `url("${this.props.src}")`,
-      height: this.state.windowWidth > 768 ? this.state.windowHeight/this.props.headerSize : this.state.windowHeight/this.props.headerSize,
-      backgroundPosition: this.props.bgpos
+    let divHeightOrd = {
+      height: this.props.height + "px"
+    }
+    let divHeightMobile = {
+      height: this.props.height/2 + "px"
     }
     return (
-      <div className="hero flex center">
-        <div id={this.props.id} style={styles}>
-          <div className="overcast" style={{ opacity: -this.state.scrollTop / 500 }} ></div>
+      <div className="hero flex center" id={this.props.id}>
+        {/*<div id={this.props.id} style={styles}>*/}
+        <BgImage sizes={this.props.src}  style={this.state.windowWidth > 768 ? divHeightOrd : divHeightMobile} position={this.props.position} fit={this.props.fit} />
+        <div className="overcast" style={{ opacity: -this.state.scrollTop / 300}} ></div>
           {/* {this.props.forName ?
             <div className="flex">
               <div className="flex center">
@@ -53,7 +63,7 @@ export default class Hero extends React.Component {
                 <h1>{this.props.classification}</h1>
             </div>
           </div> : ''} */}
-        </div>
+        {/*</div> */}
       </div>
     )
   }

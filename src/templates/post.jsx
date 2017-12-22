@@ -42,7 +42,7 @@ export default class PostTemplate extends React.Component {
         <div className="postContent flex center column">
           <Header title={post.title} date={this.formatDate(post.date)} concertDate={this.formatDate(post.concertDate)} startTime={post.startTime} location={post.location} />
           <div className="blogPost">
-            <Hero id={post.title} src={post.thumbnail.childImageSharp.responsiveSizes.src} headerSize="2"/>
+            <Hero id={post.title} src={post.thumbnail.childImageSharp.sizes} />
             <div className="basePad">
               <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
               <div className="post-meta">
@@ -78,11 +78,8 @@ export const pageQuery = graphql`
         tags
         thumbnail {
           childImageSharp {
-            responsiveSizes(maxWidth: 1920, quality: 50, cropFocus: CENTER, toFormat: JPG) {
-              src
-              srcSet
-              sizes
-              base64
+            sizes(maxWidth: 1920) {
+              ...GatsbyImageSharpSizes
             }
           }
         }

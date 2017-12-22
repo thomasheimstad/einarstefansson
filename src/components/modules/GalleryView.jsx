@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import FadeInWrapper from './FadeInWrapper';
 import PostTags from '../PostTags/PostTags';
+import Img from "gatsby-image";
 import IconCalendar from "react-icons/lib/fa/calendar";
 import IconArrowDown from "react-icons/lib/fa/angle-down";
 export default class GalleryView extends React.Component {
@@ -55,15 +56,14 @@ export default class GalleryView extends React.Component {
     <FadeInWrapper id={this.props.title} >
       <div className="postCard">
         <Link to={this.props.path} key={this.props.title}>
-        <header style={{ backgroundImage: `url("${this.props.src}")` }}>
-          <div>
-            <div className="flex center">
-              <h3>
-                {this.props.title}
-              </h3>
-            </div>
-          </div>
-        </header>
+          <header>
+            <Img sizes={this.props.src} />
+              <div className="flex center">
+                <h3>
+                  {this.props.title}
+                </h3>
+              </div>
+          </header>
         </Link>
         <div className="flex postCardTitle">
           <div className="flex center iconWrapper noPointer"><IconCalendar className="reactIcon"/></div>

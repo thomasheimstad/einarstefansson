@@ -14,7 +14,7 @@ class Media extends React.Component {
       <div className="mediaView">
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
-        <Hero id="mediaPage" src={Einar16} bgpos="60% 10%" headerSize="1.3"/>
+        <Hero id="mediaID" src={this.props.data.file.childImageSharp.sizes} height="600" position="50% 0"/>
         <PostListing postEdges={postEdges} view="mediaView"/>
       </div>
     );
@@ -42,6 +42,15 @@ export const mediaQuery = graphql`
             description
             position
           }
+        }
+      }
+    }
+    file(relativePath: { regex: "/Einar16/"  }) {
+      childImageSharp {
+        # Specify the image processing steps right in the query
+        # Makes it trivial to update as your page's design changes.
+        sizes(maxWidth: 1920, maxHeight: 1100, quality: 80) {
+          ...GatsbyImageSharpSizes
         }
       }
     }

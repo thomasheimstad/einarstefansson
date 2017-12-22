@@ -50,11 +50,8 @@ export const postQuery = graphql`
             date
             thumbnail {
               childImageSharp {
-                responsiveSizes(quality: 50, cropFocus: CENTER, toFormat: JPG) {
-                  src
-                  srcSet
-                  sizes
-                  base64
+                sizes(maxWidth: 1920) {
+                  ...GatsbyImageSharpSizes
                 }
               }
             }
