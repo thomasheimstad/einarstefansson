@@ -46,11 +46,8 @@ export const upcomingQuery = graphql`
             location
             thumbnail {
               childImageSharp {
-                responsiveSizes(quality: 50, cropFocus: CENTER, toFormat: JPG) {
-                  src
-                  srcSet
-                  sizes
-                  base64
+                sizes(maxWidth: 400, maxHeight: 300, quality: 80) {
+                  ...GatsbyImageSharpSizes
                 }
               }
             }

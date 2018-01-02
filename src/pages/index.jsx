@@ -46,10 +46,10 @@ export const pageQuery = graphql`
             title
             description
             tags
-            concertDate
-            startTime
             date
             category
+            concertDate
+            startTime
             location
             thumbnail {
               childImageSharp {

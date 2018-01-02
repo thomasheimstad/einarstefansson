@@ -1,53 +1,42 @@
 import React from "react";
 import Link from 'gatsby-link'
-import GalleryView from '../../components/modules/GalleryView';
+import GalleryView from '../../components/PostListing/GalleryView';
+import MediaPostList from '../../components/PostListing/MediaPostList';
+import UpcomingList from '../../components/PostListing/UpcomingList';
 import FadeInWrapper from "../../components/modules/FadeInWrapper";
 
-class PostListing extends React.Component {
+export default class PostListing extends React.Component {
   state={
     view: this.props.view
   }
   getPostList() {
     let today = new Date().toISOString();
-
     const postList = [];
     this.props.postEdges.forEach(postEdge => {
       let gettime = '';
-      if(postEdge.node.frontmatter.concertDate) {gettime = postEdge.node.frontmatter.concertDate}
+      let postListPusher = () => {
+        postList.push({
+          path: postEdge.node.fields.slug,
+          tags: postEdge.node.frontmatter.tags,
+          cover: postEdge.node.frontmatter.cover,
+          title: postEdge.node.frontmatter.title,
+          date: postEdge.node.frontmatter.date,
+          category: postEdge.node.frontmatter.category,
+          excerpt: postEdge.node.excerpt,
+          timeToRead: postEdge.node.timeToRead,
+          thumbnail: postEdge.node.frontmatter.thumbnail,
+          medialink: postEdge.node.frontmatter.medialink,
+          description: postEdge.node.frontmatter.description,
+          concertDate: postEdge.node.frontmatter.concertDate,
+          concertDateFormated: this.formatDate(postEdge.node.frontmatter.concertDate),
+          startTime: postEdge.node.frontmatter.startTime,
+          location: postEdge.node.frontmatter.location
+        })
+      };
       if(postEdge.node.frontmatter.position || postEdge.node.frontmatter.category === "blog" || this.props.tags) {
-        postList.push({
-          path: postEdge.node.fields.slug,
-          tags: postEdge.node.frontmatter.tags,
-          cover: postEdge.node.frontmatter.cover,
-          title: postEdge.node.frontmatter.title,
-          date: postEdge.node.frontmatter.date,
-          category: postEdge.node.frontmatter.category,
-          excerpt: postEdge.node.excerpt,
-          timeToRead: postEdge.node.timeToRead,
-          thumbnail: postEdge.node.frontmatter.thumbnail,
-          medialink: postEdge.node.frontmatter.medialink,
-          description: postEdge.node.frontmatter.description,
-          concertDate: postEdge.node.frontmatter.concertDate,
-          startTime: postEdge.node.frontmatter.startTime,
-          location: postEdge.node.frontmatter.location
-        });
+        postListPusher();
       } else if(postEdge.node.frontmatter.concertDate > today ) {
-        postList.push({
-          path: postEdge.node.fields.slug,
-          tags: postEdge.node.frontmatter.tags,
-          cover: postEdge.node.frontmatter.cover,
-          title: postEdge.node.frontmatter.title,
-          date: postEdge.node.frontmatter.date,
-          category: postEdge.node.frontmatter.category,
-          excerpt: postEdge.node.excerpt,
-          timeToRead: postEdge.node.timeToRead,
-          thumbnail: postEdge.node.frontmatter.thumbnail,
-          medialink: postEdge.node.frontmatter.medialink,
-          description: postEdge.node.frontmatter.description,
-          concertDate: postEdge.node.frontmatter.concertDate,
-          startTime: postEdge.node.frontmatter.startTime,
-          location: postEdge.node.frontmatter.location
-        });
+        postListPusher();
       }
     });
     return postList;
@@ -64,7 +53,7 @@ class PostListing extends React.Component {
 
     return [day, month, year].join(' ');
   }
-  render() {
+  render = () => {
     let defaultPostList = (...props) => {
       return (
         <div className="flex center">
@@ -75,87 +64,24 @@ class PostListing extends React.Component {
         </div>
       )
     }
-    let mediaPostList = (...props) => {
-      if(props[1].indexOf("youtube") !== -1) {
-        return (
-          <FadeInWrapper id={props[0]} >
-            <div className="flex column videoCard">
-              <div className="basePad">
-                <h2>{props[0]}</h2>
-                <h3>{props[2]}</h3>
-              </div>
-              <div className="videoWrapper">
-                <iframe width="560" height="349" src={props[1]} frameBorder="0" allowFullScreen></iframe>
-              </div>
-            </div>
-          </FadeInWrapper>
-        )
-      } else if (props[1].indexOf("soundcloud") !== -1) {
-        return (
-          <FadeInWrapper id={props[0]} >
-            <div className="flex column videoCard">
-              <div className="basePad">
-                <h2>{props[0]}</h2>
-                <h3>{props[2]}</h3>
-              </div>
-              <div className="soundcloudWrapper">
-                <iframe src={props[1]} frameBorder="0" allowFullScreen></iframe>
-              </div>
-            </div>
-          </FadeInWrapper>
-        )
-      } else {
-        return (
-          ''
-        )
-      }
-    }
-    let upcomingList = (...props) => {
-      return (
-        <FadeInWrapper id={props[0]}>
-          <Link to={props[6]}>
-          <h2>{this.formatDate(props[2])}</h2>
-          <h3>{props[0]}</h3>
-          <h4>{props[3] ? props[3] : 'TBA'}</h4>
-          <h4>{props[5]}</h4>
-        </Link>
-        </FadeInWrapper>
-      )
-    }
     let checkView = (props) => {
       if (this.state.view == "galleryView") {
-        let formatedDate = this.formatDate(props.concertDate);
-      return(
-        <GalleryView
-          src = {props.thumbnail.childImageSharp.sizes}
-          title = {props.title}
-          date = {props.date}
-          excerpt = {props.excerpt}
-          description = {props.description}
-          tags = {props.tags}
-          path = {props.path}
-          timeToRead = {props.timeToRead}
-          category = {props.category}
-          concertDate = {formatedDate}
-          startTime={props.startTime} />
-      )
+        return <GalleryView {...props} />
     } else if (this.state.view == "mediaView") {
-        return(mediaPostList(props.title, props.medialink, props.description))
-      } else if (this.state.view == "upcomingView") {
-        return(upcomingList(props.title, props.description, props.concertDate, props.startTime, props.tags, props.location, props.path))
-      } else {
+        return <MediaPostList {...props} />
+    } else if (this.state.view == "upcomingView") {
+        return <UpcomingList {...props} />
+    } else {
         return(defaultPostList(props.title, props.date))
       }
     }
-
     const postList = this.getPostList();
+
     return (
       <div className={`${this.state.view} basePad`} >
         {/* Your post list here. */
         postList.map(post =>
           <div key={post.title} >
-              {/* {post.thumbnail.childImageSharp.responsiveSizes.src.length > 0 ? <img src={post.thumbnail.childImageSharp.responsiveSizes.src} data-src={post.thumbnail.childImageSharp.responsiveSizes.src} data-srcset={post.thumbnail.childImageSharp.responsiveSizes.srcSet} data-sizes={post.thumbnail.childImageSharp.responsiveSizes.sizes} className="lazyload" alt={post.title}/> : ''} */}
-              {/* Chech for returned thumbnail image. Return header  */}
               {checkView(post)}
           </div>
         )}
@@ -163,5 +89,3 @@ class PostListing extends React.Component {
     );
   }
 }
-
-export default PostListing;
