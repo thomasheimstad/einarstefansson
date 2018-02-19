@@ -1,6 +1,6 @@
 ---
 category: upcoming
-title: Lunchtime concert
+title: Lunchtime concert berlioz' irlande
 date: 2017-11-25T20:04:44.484Z
 thumbnail: ./img/Einar5.jpg
 tags:
