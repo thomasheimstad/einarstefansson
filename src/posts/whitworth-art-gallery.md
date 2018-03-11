@@ -9,8 +9,8 @@ tags:
   - Whitworth
   - World Premiere
   - Manchester
-concertDate: 2018-09-15T17:00:12.000Z
+concertDate: 2018-11-09T18:00:12+00:00
 startTime: '18:00'
 location: 'Whitworth Art Gallery, Manchester'
 ---
-World Premiere of new work commissioned for members of Bergen National Opera's Unge Stemmer Talent Programme, to be performed in the Whitworth Art Gallery, Manchester, in September 2018
+World Premiere of new work by Tyrone Landau, commissioned for members of Bergen National Opera's Unge Stemmer Talent Programme, to be performed in the Whitworth Art Gallery, Manchester, in the Autumn of 2018
