@@ -4,9 +4,11 @@ title: A celebration of Finnish music
 date: 2018-03-11T17:58:45.717Z
 thumbnail: ./img/st chrysostoms.jpg
 tags:
-  - term_1
-  - term_2
-concertDate: 2018-04-18T19:00:45+01:00
+  - Finnish
+  - solo
+  - art song
+  - Manchester
+concertDate: 2018-04-18T18:00:45.000Z
 startTime: '19:00'
 location: 'St. Chrysostom''s Church, Manchester'
 ---
