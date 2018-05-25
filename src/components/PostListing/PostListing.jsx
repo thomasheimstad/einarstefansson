@@ -66,7 +66,19 @@ export default class PostListing extends React.Component {
     }
     let checkView = (props) => {
       if (this.state.view == "galleryView") {
-        return <GalleryView {...props} />
+        return <GalleryView
+          title={props.title}
+          category={props.category}
+          timeToRead={props.timeToRead}
+          path={props.path}
+          concertDateFormated={props.concertDateFormated}
+          thumbnail={props.thumbnail}
+          concertDate={props.concertDate}
+          startTime={props.startTime}
+          tags={props.tags}
+          description={props.description}
+          excerpt={props.excerpt}
+         />
     } else if (this.state.view == "mediaView") {
         return <MediaPostList {...props} />
     } else if (this.state.view == "upcomingView") {
