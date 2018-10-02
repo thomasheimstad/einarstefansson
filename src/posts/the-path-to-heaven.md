@@ -1,6 +1,6 @@
 ---
 category: blog
-title: The Path to Heaven
+title: The Path to Heaven news
 date: 2018-10-02T12:32:47.319Z
 thumbnail: ./img/tpth_officer.jpg
 tags:
