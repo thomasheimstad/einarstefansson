@@ -2,7 +2,7 @@
 category: blog
 title: Welcome
 date: 2017-11-28T20:45:39.703Z
-thumbnail: .img/Einar19.jpg
+thumbnail: ./img/Einar19.jpg
 tags:
   - info
   - meta
