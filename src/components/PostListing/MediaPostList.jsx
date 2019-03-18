@@ -30,6 +30,20 @@ const MediaPostList = props => {
         </div>
       </FadeInWrapper>
     )
+  } else if(props.medialink.indexOf("vimeo") !== -1 ) {
+    return (
+      <FadeInWrapper id={props.title} >
+        <div className="flex column videoCard">
+          <div className="basePad">
+            <h2>{props.title}</h2>
+            <h3>{props.description}</h3>
+          </div>
+          <div className="videoWrapper">
+          <iframe src={props.medialink} width="560" height="349" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+        </div>
+      </FadeInWrapper>
+    )
   } else {
     return (
       ''
