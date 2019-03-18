@@ -154,7 +154,7 @@ module.exports = {
                     }
                     frontmatter {
                       title
-                      img {
+                      thumbnail {
                         childImageSharp {
                             fluid(maxWidth: 600, quality: 50) {
                               src
