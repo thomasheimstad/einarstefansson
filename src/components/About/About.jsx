@@ -13,16 +13,22 @@ class About extends Component {
           <div className="blogPost basePad">
           <h1>Bio</h1>
           <p>
-            Icelandic/Norwegian bass Einar Stefánsson is currently studying for a BMus (Hons) degree at the prestigious Royal Northern College of Music in Manchester, UK. He has been part of Bergen National Opera’s talent programme Unge Stemmer (Young Voices) in Norway since 2016, and has taken part in numerous productions with the same company since 2010.
+            Icelandic/Norwegian bass Einar Stefánsson is currently studying at the prestigious Royal Northern College of Music in Manchester. He is part of the Young Artist Programmes of Buxton International Festival and the leading Norwegian opera company Bergen National Opera. Einar is also associated with the inventive Manchester based collective The Opera Shack.
           </p>
           <p>
-            Einar regularly performs with the ambitious Edvard Grieg Youth Choir, of which he has been a member since its foundation in 2013. In addition to regular coachings and concerts with their mentor choir, the professional vocal ensemble Edvard Grieg Kor, the Youth Choir has performed with international artists such as The Rolling Stones, Bergen Philharmonic Orchestra, Edward Gardner, Masaaki Suzuki and Sir Andrew Davies. Einar’s musical background and experience is broad, and although his main passion is music from the 19th Century, his musical interests span from Baroque opera and oratorio to contemporary music. Einar started his musical career playing the violin from the age of 5, among other things bringing him to play with the National Youth Orchestra in Norway, with which he toured in Canada, the United States, Russia and Norway. As a boy he joined the Bergen Boys’ Choir and later the Bergen Philharmonic Choir.
+            Einar started his musical career playing the violin from the age of 5, among other things bringing him on tour to Canada, the US, Norway and Russia with the National Youth Orchestra of Norway. As a boy he joined Bergen Boys’ Choir and later the Bergen Philharmonic Choir.
           </p>
           <p>
-            Einar’s previous teachers include David Hansford and distinguished British bass-baritone Simon Kirkbride. He has also had coaching with performers such as world-renowned pianist Helmut Deutsch and Einar Steen-Nøkleberg. Since 2016 Einar has been studying with internationally acclaimed bass Matthew Best at the Royal Northern College of Music with generous support from the Waverly Fund.
+            Einar’s previous teachers include David Hansford and distinguished bass-baritone Simon Kirkbride. He has also worked with world-renowned pianists Julius Drake, Helmut Deutsch and Einar Steen-Nøkleberg. Since 2016 Einar has been studying with internationally acclaimed bass Matthew Best at the Royal Northern College of Music supported by the Waverly Fund and a James and Mary Glass Award.
           </p>
           <p>
-            Recent highlights include performances at Bergen National Opera’s opera festival ‘Mimì Goes Glamping’ in Norway, as a soloist in Ariel Ramirez’ ‘Misa Criolla’, and appearances as a pop-up opera artist during the World Cycling Championship in Bergen, Norway.
+          Einar regularly sings with the ambitious Edvard Grieg Youth Choir. He has also performed with ensembles such as Opera North, RNCM Opera, numerous productions with Bergen National Opera, West Cumberland Choral Society and the Yorke Trust as well as at Bergen National Opera’s opera festival ‘Mimì Goes Glamping’ and as a pop-up opera artist during the World Cycling Championship in Norway.
+          </p>
+          <p>
+          Being curious and versatile, Einar has developed a broad musical interest. He has developed a particular interest in contemporary and experimental music. This has led to a number of adventurous projects over recent years, involving collaborative projects, electronic music and dancing at the bottom of an (empty) swimming pool. In June 2018 Einar created the roles of Kapo/Nazi Officer/Dr Rudi in the world premiere of Adam Gorb’s opera The Path to Heaven at Howard Assembly Room in Leeds to great critical acclaim. Another recent highlight includes premiering La Donna della Finestra commissioned by Bergen National Opera from Tyrone Landau for members of its Unge Stemmer talent programme. A similar collaboration with Tyrone is planned for the spring of 2020.
+          </p>
+          <p>
+          Other exciting projects ahead include the roles of Bartolo and Antonio in Mozart’s The Marriage of Figaro with Access All Arias as well as a new experimental work with voice and electronics with composer Shaun Davies. Also on the list of cool things coming up is the role of Brühlmann in Massenet’s Werther with Bergen National Opera and the role of The Judge in Buxton International Festival’s production of the contemporary South African opera The Orphans of Kumbu. During Buxton International Festival 2019 Einar will also be part of the chorus in Eugene Onegin and perform at the opening gala concert.
           </p>
           <div className="flex column center">
             <ul><li><h2>Contact information</h2></li></ul>

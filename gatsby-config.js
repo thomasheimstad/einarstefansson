@@ -1,47 +1,49 @@
 const config = require("./data/SiteConfig");
-
-const pathPrefix = config.pathPrefix === "/" ? "" : config.pathPrefix;
+const urljoin = require("url-join");
 
 module.exports = {
   pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix,
+    siteUrl: urljoin(config.siteUrl, config.pathPrefix),
     rssMetadata: {
-      site_url: config.siteUrl + pathPrefix,
-      feed_url: config.siteUrl + pathPrefix + config.siteRss,
+      site_url: urljoin(config.siteUrl, config.pathPrefix),
+      feed_url: urljoin(config.siteUrl, config.pathPrefix, config.siteRss),
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `${config.siteUrl + pathPrefix}/logos/logo-512.png`,
+      image_url: `${urljoin(
+        config.siteUrl,
+        config.pathPrefix
+      )}/logos/logo-512.png`,
       author: config.userName,
       copyright: config.copyright
     }
   },
   plugins: [
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-lodash",
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "posts",
-        path: `${__dirname}/src/${config.blogPostDir}`
+        name: "images",
+        path: `${__dirname}/src/posts/img`
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/posts/img`,
-        name: 'images'
+        name: "posts",
+        path: `${__dirname}/src/posts`
       }
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: "gatsby-transformer-remark",
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 690,
-              linkImagesToOriginal: false
+              maxWidth: 690
             }
           },
           {
@@ -49,7 +51,7 @@ module.exports = {
           },
           "gatsby-remark-prismjs",
           "gatsby-remark-copy-linked-files",
-          // "gatsby-remark-autolink-headers"
+          "gatsby-remark-autolink-headers"
         ]
       }
     },
@@ -65,16 +67,15 @@ module.exports = {
         color: config.themeColor
       }
     },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     "gatsby-plugin-catch-links",
     "gatsby-plugin-twitter",
-    "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
       options: {
         name: config.siteTitle,
-        short_name: config.siteTitle,
+        short_name: config.siteTitleShort,
         description: config.siteDescription,
         start_url: config.pathPrefix,
         background_color: config.backgroundColor,
@@ -101,7 +102,7 @@ module.exports = {
         setup(ref) {
           const ret = ref.query.site.siteMetadata.rssMetadata;
           ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = "Einar Stefansson Homepage";
+          ret.generator = "GatsbyJS Material Starter";
           return ret;
         },
         query: `
@@ -124,10 +125,10 @@ module.exports = {
         feeds: [
           {
             serialize(ctx) {
-              const rssMetadata = ctx.query.site.siteMetadata.rssMetadata;
+              const { rssMetadata } = ctx.query.site.siteMetadata;
               return ctx.query.allMarkdownRemark.edges.map(edge => ({
                 categories: edge.node.frontmatter.tags,
-                date: edge.node.frontmatter.date,
+                date: edge.node.fields.date,
                 title: edge.node.frontmatter.title,
                 description: edge.node.excerpt,
                 author: rssMetadata.author,
@@ -140,16 +141,26 @@ module.exports = {
             {
               allMarkdownRemark(
                 limit: 1000,
-                sort: { order: DESC, fields: [frontmatter___date] },
+                sort: { order: DESC, fields: [fields___date] },
               ) {
                 edges {
                   node {
                     excerpt
                     html
                     timeToRead
-                    fields { slug }
+                    fields {
+                      slug
+                      date
+                    }
                     frontmatter {
                       title
+                      img {
+                        childImageSharp {
+                            fluid(maxWidth: 600, quality: 50) {
+                              src
+                          }
+                        }
+                      }
                       date
                       category
                       tags

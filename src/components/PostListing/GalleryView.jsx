@@ -1,10 +1,10 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import {Link} from 'gatsby';
 import FadeInWrapper from '../modules/FadeInWrapper';
 import PostTags from '../PostTags/PostTags';
 import Img from "gatsby-image";
-import IconCalendar from "react-icons/lib/fa/calendar";
-import IconArrowDown from "react-icons/lib/fa/angle-down";
+import {FaCalendar} from "react-icons/fa";
+import {FaAngleDown} from "react-icons/fa";
 export default class GalleryView extends React.Component {
   state={
     showCardContent: false,
@@ -57,7 +57,7 @@ export default class GalleryView extends React.Component {
       <div className="postCard">
         <Link to={this.props.path} key={this.props.title}>
           <header>
-            <Img sizes={this.props.thumbnail.childImageSharp.sizes} />
+            <Img fluid={this.props.thumbnail.childImageSharp.fluid} />
               <div className="flex center">
                 <h3>
                   {this.props.title}
@@ -66,12 +66,12 @@ export default class GalleryView extends React.Component {
           </header>
         </Link>
         <div className="flex postCardTitle">
-          <div className="flex center iconWrapper noPointer"><IconCalendar className="reactIcon"/></div>
+          <div className="flex center iconWrapper noPointer"><FaCalendar className="reactIcon"/></div>
           <div className="flex column"><h5>{this.props.concertDateFormated === "NaN  NaN" ? this.props.title : this.props.concertDateFormated}</h5>
             {this.checkH5content(this.props.category, this.props.timeToRead, this.props.startTime, this.props.title)}
           </div>
           {this.state.windowWidth < 600 ?
-            <div onClick={this.onClickHandler} className="iconWrapper flex center noBackground"><IconArrowDown className={"reactIcon "  + (this.state.rotater ? 'rotateTo' : 'rotateBack')}/></div> :
+            <div onClick={this.onClickHandler} className="iconWrapper flex center noBackground"><FaAngleDown className={"reactIcon "  + (this.state.rotater ? 'rotateTo' : 'rotateBack')}/></div> :
              ''}
         </div>
         <div className={'flex postCardContent center column ' + (this.state.showCardContent ? 'showCards' : 'hideCards')}>

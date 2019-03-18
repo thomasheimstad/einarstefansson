@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import Helmet from "react-helmet";
 import Nav from '../components/modules/Nav';
 import NavBar from '../components/modules/NavBar';
@@ -52,23 +52,22 @@ export default class MainLayout extends React.Component {
     return title;
   }
   render() {
-    const { children } = this.props;
+    const { children, location, state } = this.props;
     return (
-      <div>
+      <Fragment>
         <Helmet>
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
-          <meta name="google-site-verification" content={config.googleSiteVerification} />
         </Helmet>
         <NavBar showNav={this.state.showNav} handleClick={this.handleClick} />
         <Nav showNav={this.state.showNav} handleClick={this.handleClick} />
         <ScrollBar />
         <div className={this.state.showNav ? 'overlay' : 'overlayOut'} onClick={this.handleClick}></div>
         <div>
-          {children()}
+          {children}
         </div>
         <Footer config={config}/>
-      </div>
+      </Fragment>
     )
   }
 }

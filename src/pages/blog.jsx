@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import Layout from "../components/layout";
 import Header from "../components/modules/Header";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
@@ -15,12 +16,14 @@ class BlogPostList extends React.Component {
     const postEdges = this.props.data.allMarkdownRemark.edges;
 
     return (
-      <div className="index-container">
-        <Helmet title={config.siteTitle} />
-        <SEO postEdges={postEdges} />
-        <Header title="Blog" />
-        <PostListing postEdges={postEdges} view="galleryView"/>
-      </div>
+      <Layout location={this.props.location}>
+        <div className="index-container">
+          <Helmet title={config.siteTitle} />
+          <SEO postEdges={postEdges} />
+          <Header title="Blog" />
+          <PostListing postEdges={postEdges} view="galleryView"/>
+        </div>
+      </Layout>
     );
   }
 }
@@ -50,8 +53,8 @@ export const postQuery = graphql`
             date
             thumbnail {
               childImageSharp {
-                sizes(maxWidth: 1920) {
-                  ...GatsbyImageSharpSizes
+                fluid(maxWidth: 1920) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

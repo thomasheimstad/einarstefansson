@@ -1,8 +1,5 @@
 import React from 'react';
-import NavLink from 'gatsby-link';
-import MdHome from 'react-icons/lib/md/home';
-import MdInfo from 'react-icons/lib/md/info';
-import MdFace from 'react-icons/lib/fa/facebook-official';
+import {Link} from 'gatsby';
 
 export default class NavLinks extends React.Component {
   consoleThis = () => {
@@ -14,11 +11,11 @@ export default class NavLinks extends React.Component {
   render = () => {
     return (
       <ul className="flex center">
-        <li onClick={this.props.handleClick}><NavLink exact to="/"><h4>Home</h4></NavLink></li>
-        <li onClick={this.props.handleClick}><NavLink exact to="/media"><h4>Media</h4></NavLink></li>
-        <li onClick={this.props.handleClick}><NavLink exact to="/blog"><h4>Blog</h4></NavLink></li>
-        <li onClick={this.props.handleClick}><NavLink exact to="/upcoming"><h4>Upcoming</h4></NavLink></li>
-        <li onClick={this.props.handleClick}><NavLink exact to="/about"><h4>About</h4></NavLink></li>
+        <li onClick={this.props.handleClick}><Link to="/"><h4>Home</h4></Link></li>
+        <li onClick={this.props.handleClick}><Link to="/media"><h4>Media</h4></Link></li>
+        <li onClick={this.props.handleClick}><Link to="/blog"><h4>Blog</h4></Link></li>
+        <li onClick={this.props.handleClick}><Link to="/upcoming"><h4>Upcoming</h4></Link></li>
+        <li onClick={this.props.handleClick}><Link to="/about"><h4>About</h4></Link></li>
       </ul>
     )
   }

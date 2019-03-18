@@ -1,5 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
+import Layout from "../components/layout";
 import UserInfo from "../components/UserInfo/UserInfo";
 import Disqus from "../components/Disqus/Disqus";
 import PostTags from "../components/PostTags/PostTags";
@@ -33,28 +34,30 @@ export default class PostTemplate extends React.Component {
       post.category_id = config.postDefaultCategoryID;
     }
     return (
-      <div className="post">
-        <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
-        </Helmet>
-        <SEO postPath={slug} postNode={postNode} postSEO />
-        {/*<Hero id={post.id} src={post.thumbnail.childImageSharp.responsiveSizes.src} headerSize="1.5"/>*/}
-        <div className="postContent flex center column">
-          <Header title={post.title} date={this.formatDate(post.date)} concertDate={this.formatDate(post.concertDate)} startTime={post.startTime} location={post.location} />
-          <div className="blogPost">
-            <Hero id={post.title} src={post.thumbnail.childImageSharp.sizes} />
-            <div className="basePad">
-              <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
-              <div className="post-meta">
-                <PostTags tags={post.tags} />
-                {/* <SocialLinks postPath={slug} postNode={postNode} /> */}
+      <Layout location={this.props.location}>
+        <div className="post">
+          <Helmet>
+            <title>{`${post.title} | ${config.siteTitle}`}</title>
+          </Helmet>
+          <SEO postPath={slug} postNode={postNode} postSEO />
+          {/*<Hero id={post.id} src={post.thumbnail.childImageSharp.responsiveSizes.src} headerSize="1.5"/>*/}
+          <div className="postContent flex center column">
+            <Header title={post.title} date={this.formatDate(post.date)} concertDate={this.formatDate(post.concertDate)} startTime={post.startTime} location={post.location} />
+            <div className="blogPost">
+              <Hero id={post.title} src={post.thumbnail.childImageSharp.fluid} />
+              <div className="basePad">
+                <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+                <div className="post-meta">
+                  <PostTags tags={post.tags} />
+                  {/* <SocialLinks postPath={slug} postNode={postNode} /> */}
+                </div>
               </div>
+              {/*<UserInfo config={config} />
+              {/* }<Disqus postNode={postNode} /> */}
             </div>
-            {/*<UserInfo config={config} />
-            {/* }<Disqus postNode={postNode} /> */}
           </div>
         </div>
-      </div>
+      </Layout>
     );
   }
 }
@@ -78,8 +81,8 @@ export const pageQuery = graphql`
         tags
         thumbnail {
           childImageSharp {
-            sizes(maxWidth: 1920) {
-              ...GatsbyImageSharpSizes
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
             }
           }
         }

@@ -1,8 +1,8 @@
 import React from 'react';
-import MdRecordVoiceOver from 'react-icons/lib/md/record-voice-over';
-import TiFlag from "react-icons/lib/ti/flag";
-import School from "react-icons/lib/md/school";
-import TiFlagOutline from "react-icons/lib/ti/flag-outline";
+import {MdRecordVoiceOver} from 'react-icons/md';
+import {TiFlag} from "react-icons/ti";
+import {MdSchool} from "react-icons/md";
+import {TiFlagOutline} from "react-icons/ti";
 
 import FadeInWrapper from './FadeInWrapper';
 export default class SalesPitch extends React.Component {
@@ -25,7 +25,7 @@ export default class SalesPitch extends React.Component {
       </FadeInWrapper>
       <FadeInWrapper id="salesPitch3">
         <div className="flex center column">
-          <School />
+          <MdSchool />
           <h2>Student</h2>
           <p>Royal Northern College of Music, Manchester</p>
         </div>

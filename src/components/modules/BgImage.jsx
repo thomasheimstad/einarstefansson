@@ -1,8 +1,8 @@
 import React from 'react'
-import Image from 'gatsby-image'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
 
-const BgImage = styled(Image)`
+const BgImage = styled(Img)`
   position: absolute;
   top: 0;
   left: 0;

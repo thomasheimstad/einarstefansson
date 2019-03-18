@@ -1,6 +1,5 @@
 import React from 'react';
-import BgImage from "./BgImage";
-import DownArrow from 'react-icons/lib/fa/angle-down';
+import Img from "gatsby-image";
 
 export default class Hero extends React.Component {
   state = {
@@ -53,7 +52,7 @@ export default class Hero extends React.Component {
     return (
       <div className="hero flex center" id={this.props.id}>
         {/*<div id={this.props.id} style={styles}>*/}
-        <BgImage sizes={this.props.src}  style={this.state.windowWidth > 768 ? divHeightOrd : divHeightMobile} position={this.props.position} fit={this.props.fit} />
+        <Img fluid={this.props.src} style={this.state.windowWidth > 768 ? divHeightOrd : divHeightMobile} position={this.props.position} fit={this.props.fit} />
         <div className="overcast" style={{ opacity: -this.state.scrollTop / 300}} ></div>
           {/* {this.props.forName ?
             <div className="flex">

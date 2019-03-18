@@ -1,6 +1,5 @@
 import React from 'react';
-import MdMenu from 'react-icons/lib/md/menu';
-import Link from 'gatsby-link'
+import {Link} from 'gatsby'
 
 export default class NavBar extends React.Component{
   state = {

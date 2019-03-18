@@ -2,7 +2,7 @@
 category: upcoming
 title: A celebration of Finnish music
 date: 2018-03-11T17:58:45.717Z
-thumbnail: ./img/st chrysostoms.jpg
+thumbnail: ./img/stchrysostoms.jpg
 tags:
   - Finnish
   - solo

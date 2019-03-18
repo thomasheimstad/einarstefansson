@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
-import Header from "../components/modules/Header";
+import Layout from "../components/layout"
+;import Header from "../components/modules/Header";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
 import config from "../../data/SiteConfig";
@@ -9,12 +10,14 @@ class Upcoming extends React.Component {
   render() {
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
-      <div className="upcoming">
-        <Helmet title={config.siteTitle} />
-        <SEO postEdges={postEdges} />
-        <Header title="Upcoming" />
-        <PostListing postEdges={postEdges} view="upcomingView" />
-      </div>
+      <Layout location={this.props.location}>
+        <div className="upcoming">
+          <Helmet title={config.siteTitle} />
+          <SEO postEdges={postEdges} />
+          <Header title="Upcoming" />
+          <PostListing postEdges={postEdges} view="upcomingView" />
+        </div>
+      </Layout>
     );
   }
 }
@@ -24,7 +27,6 @@ export default Upcoming;
 export const upcomingQuery = graphql`
   query UpcomingQuery {
     allMarkdownRemark(
-      limit: 100
       sort: { fields: [frontmatter___concertDate], order: ASC }
       filter: { frontmatter: { category: { eq: "upcoming"} } }
     ) {
@@ -46,8 +48,8 @@ export const upcomingQuery = graphql`
             location
             thumbnail {
               childImageSharp {
-                sizes(maxWidth: 400, maxHeight: 300, quality: 80) {
-                  ...GatsbyImageSharpSizes
+                fluid(maxWidth: 400, maxHeight: 300, quality: 80) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

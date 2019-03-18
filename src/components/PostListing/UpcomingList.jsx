@@ -1,6 +1,6 @@
 import React from "react";
 import FadeInWrapper from "../modules/FadeInWrapper";
-import Link from "gatsby-link";
+import {Link} from "gatsby";
 
 const UpcomingList = props => {
   return (

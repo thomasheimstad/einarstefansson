@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { FaSoundcloud, FaTwitter } from 'react-icons/lib/fa/';
+import { FaSoundcloud, FaTwitter } from 'react-icons/fa';
 export default class SoMeButtons extends Component {
   state = {
     iconSize: '',
